@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fundación Vive Vencejo (NIT 900.774.341-2) en Soledad, Atlántico. Apoyamos a personas con discapacidad, víctimas de minas antipersonales, emprendedores de la tercera edad y población vulnerable. Venceremos Juntos los Obstáculos.">
+    <meta name="keywords" content="Fundación Vive Vencejo, discapacidad, víctimas de minas, tercera edad, ayuda social, Soledad Atlántico, Colombia, donaciones, emprendimiento inclusivo, deporte adaptado">
+    <meta name="author" content="Fundación Vive Vencejo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vivevencejo.org/">
+    <meta property="og:title" content="Fundación Vive Vencejo | Venceremos Juntos los Obstáculos">
+    <meta property="og:description" content="Apoyamos a personas con discapacidad, víctimas de minas antipersonales y emprendedores de la tercera edad en Colombia. Descubre cómo ayudar hoy.">
+    <meta property="og:image" content="assets/hero-community.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vivevencejo.org/">
+    <meta property="twitter:title" content="Fundación Vive Vencejo | Venceremos Juntos los Obstáculos">
+    <meta property="twitter:description" content="Apoyamos a personas con discapacidad, víctimas de minas antipersonales y emprendedores de la tercera edad en Colombia. Descubre cómo ayudar hoy.">
+    <meta property="twitter:image" content="assets/hero-community.png">
+
+    <title>Fundación Vive Vencejo | Venceremos Juntos los Obstáculos</title>
+
+    <!-- Google Fonts: Outfit (headings) & Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="icon" type="image/png" href="assets/product-craft.png">
+</head>
+<body>
+
+    <!-- Saltar al contenido principal (Accesibilidad) -->
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="main-header" id="header">
+        <div class="header-container container">
+            <a href="#" class="logo" aria-label="Fundación Vive Vencejo Inicio">
+                <span class="logo-accent"><i class="fa-solid fa-dove"></i></span>
+                <span class="logo-text">Vive Vencejo</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+                    <li><a href="#programas" class="nav-link">Programas</a></li>
+                    <li><a href="#tienda" class="nav-link">Tienda Solidaria</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#donar" class="btn-donate-nav btn btn-primary-gradient">Cómo Ayudar</a>
+                    <button class="cart-trigger" id="cart-trigger" aria-label="Ver carrito de compras, 0 artículos" aria-haspopup="dialog">
+                        <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="header-buttons-mobile">
+                <button class="cart-trigger-mobile" id="cart-trigger-mobile" aria-label="Ver carrito de compras, 0 artículos" aria-haspopup="dialog">
+                    <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-badge" id="cart-count-mobile">0</span>
+                </button>
+                <button class="hamburger-menu" id="hamburger-menu" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- SECCIÓN 1: HERO / INICIO -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <!-- El fondo de imagen se cargará desde index.css usando assets/hero-community.png -->
+            <div class="container hero-container grid-2">
+                <div class="hero-content scroll-reveal-left">
+                    <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> Impactando vidas en Soledad, Atlántico</span>
+                    <h1 class="hero-title">Fundación <br><span class="highlight-text-green">Vive</span> <span class="highlight-text-blue">Vencejo</span></h1>
+                    <p class="hero-slogan">“Venceremos Juntos los Obstáculos”</p>
+                    <p class="hero-description">
+                        Somos una organización sin ánimo de lucro dedicada a empoderar y apoyar a personas en situación de discapacidad, víctimas de minas antipersonales, emprendedores de la tercera edad y población vulnerable a través de oportunidades reales de inclusión, deporte y trabajo.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#quienes-somos" class="btn btn-primary-gradient">Conócenos <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#donar" class="btn btn-secondary-outline">Cómo Ayudar <i class="fa-solid fa-hand-holding-heart"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-container scroll-reveal-right">
+                    <div class="hero-main-card">
+                        <img src="assets/hero-community.png" alt="Grupo diverso de beneficiarios y voluntarios de la Fundación Vive Vencejo, demostrando unión y superación" class="hero-img" loading="eager">
+                        <div class="hero-card-floating card-impact">
+                            <div class="card-impact-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div>
+                                <h4 class="impact-number" data-target="500">+0</h4>
+                                <p>Vidas Transformadas</p>
+                            </div>
+                        </div>
+                        <div class="hero-card-floating card-location">
+                            <i class="fa-solid fa-location-dot"></i> Soledad, Atlántico
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divisor decorativo -->
+            <div class="hero-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 2: QUIÉNES SOMOS -->
+        <section id="quienes-somos" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">¿Quiénes Somos?</span>
+                    <h2 class="section-title">Nuestra Misión de Superación</h2>
+                    <p class="section-description-text">Transformamos barreras en oportunidades reales de desarrollo integral en la región Caribe.</p>
+                </div>
+
+                <div class="about-grid grid-2">
+                    <div class="about-content scroll-reveal-left">
+                        <h3 class="about-sub-title">Nuestra Historia</h3>
+                        <p class="about-text">
+                            La <strong>Fundación Vive Vencejo (NIT 900.774.341-2)</strong> nació de la profunda convicción de que los límites solo existen en la mente. Establecidos en el municipio de Soledad, Atlántico, nuestro propósito es tender una mano firme y amiga a quienes la sociedad suele dejar atrás. 
+                        </p>
+                        <p class="about-text">
+                            Nos inspiramos en el <em>Vencejo</em>, un ave extraordinaria que pasa casi toda su vida volando, superando tormentas y corrientes de aire sin descansar, adaptándose al cielo con una gracia y resistencia infinita. Al igual que este animal, apoyamos a nuestra comunidad para que mantenga el vuelo, superando cualquier adversidad.
+                        </p>
+
+                        <!-- Himno / Acróstico Decorado -->
+                        <div class="acrostic-box">
+                            <h4 class="acrostic-title"><i class="fa-solid fa-dove"></i> Acróstico de Vuelo</h4>
+                            <ul class="acrostic-list">
+                                <li><strong>V</strong>alor para enfrentar los desafíos de la vida cotidiana.</li>
+                                <li><strong>I</strong>nclusión como derecho fundamental de todo ser humano.</li>
+                                <li><strong>V</strong>oluntad de superarse más allá de las limitaciones físicas.</li>
+                                <li><strong>E</strong>mpatía para construir un tejido social solidario y fuerte.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about-cards-container scroll-reveal-right">
+                        <!-- Mision -->
+                        <div class="about-card card-glass">
+                            <div class="about-card-icon bg-green-light"><i class="fa-solid fa-bullseye icon-green"></i></div>
+                            <div class="about-card-info">
+                                <h4>Misión</h4>
+                                <p>Fomentar la inclusión sociolaboral, el desarrollo deportivo y el apoyo social para personas con discapacidad, víctimas de minas y adultos mayores, garantizando sus derechos y dignidad.</p>
+                            </div>
+                        </div>
+
+                        <!-- Vision -->
+                        <div class="about-card card-glass">
+                            <div class="about-card-icon bg-blue-light"><i class="fa-solid fa-eye icon-blue"></i></div>
+                            <div class="about-card-info">
+                                <h4>Visión</h4>
+                                <p>Ser para el año 2030 una fundación líder en Colombia, reconocida por modelos exitosos de emprendimiento adaptado, rehabilitación social y empoderamiento de poblaciones vulnerables.</p>
+                            </div>
+                        </div>
+
+                        <!-- Valores -->
+                        <div class="about-card card-glass">
+                            <div class="about-card-icon bg-gold-light"><i class="fa-solid fa-handshake-angle icon-gold"></i></div>
+                            <div class="about-card-info">
+                                <h4>Valores Fundacionales</h4>
+                                <p>Nuestras acciones se rigen por la <strong>solidaridad activa</strong>, el <strong>respeto incondicional</strong>, la <strong>transparencia</strong> en el impacto social y el <strong>coraje</strong> para vencer obstáculos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 3: NUESTROS PROGRAMAS / IMPACTO -->
+        <section id="programas" class="programs-section section-padding bg-light-alt">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">¿Qué Hacemos?</span>
+                    <h2 class="section-title">Programas con Impacto Social</h2>
+                    <p class="section-description-text">Estructuramos proyectos diseñados para la rehabilitación productiva, física y emocional de nuestra población.</p>
+                </div>
+
+                <div class="programs-grid grid-4">
+                    <!-- Programa 1 -->
+                    <div class="program-card scroll-reveal" style="--order: 1">
+                        <div class="program-icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3>Integración Laboral</h3>
+                        <p>Brindamos capacitación técnica, talleres de habilidades blandas y alianzas con empresas locales para generar empleos dignos y estables para personas en condición de discapacidad.</p>
+                        <div class="program-hover-indicator"><i class="fa-solid fa-plus"></i> Saber más</div>
+                    </div>
+
+                    <!-- Programa 2 -->
+                    <div class="program-card scroll-reveal" style="--order: 2">
+                        <div class="program-icon-wrapper"><i class="fa-solid fa-wheelchair-active"></i></div>
+                        <h3>Apoyo a Víctimas</h3>
+                        <p>Acompañamos a víctimas de minas antipersonales con apoyo psicosocial, orientación para el acceso a prótesis y talleres de adaptación ocupacional artesanal.</p>
+                        <div class="program-hover-indicator"><i class="fa-solid fa-plus"></i> Saber más</div>
+                    </div>
+
+                    <!-- Programa 3 -->
+                    <div class="program-card scroll-reveal" style="--order: 3">
+                        <div class="program-icon-wrapper"><i class="fa-solid fa-medal"></i></div>
+                        <h3>Deporte Adaptado</h3>
+                        <p>Promovemos la salud y la integración social por medio de disciplinas deportivas inclusivas (atletismo adaptado, baloncesto en silla de ruedas, entrenamientos funcionales).</p>
+                        <div class="program-hover-indicator"><i class="fa-solid fa-plus"></i> Saber más</div>
+                    </div>
+
+                    <!-- Programa 4 -->
+                    <div class="program-card scroll-reveal" style="--order: 4">
+                        <div class="program-icon-wrapper"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3>Emprendedores Dorados</h3>
+                        <p>Apoyamos la economía y el bienestar de los adultos mayores a través de la co-creación y comercialización de artesanías, bisutería y productos textiles.</p>
+                        <div class="program-hover-indicator"><i class="fa-solid fa-plus"></i> Saber más</div>
+                    </div>
+                </div>
+
+                <!-- CONTADORES DE IMPACTO -->
+                <div class="impact-counter-row grid-4 scroll-reveal">
+                    <div class="counter-item card-glass text-center">
+                        <div class="counter-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="counter-number" data-target="520">0</h3>
+                        <p>Personas Apoyadas</p>
+                    </div>
+                    <div class="counter-item card-glass text-center">
+                        <div class="counter-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+                        <h3 class="counter-number" data-target="150">0</h3>
+                        <p>Víctimas & Discapacitados Integrados</p>
+                    </div>
+                    <div class="counter-item card-glass text-center">
+                        <div class="counter-icon"><i class="fa-solid fa-gift"></i></div>
+                        <h3 class="counter-number" data-target="3400">0</h3>
+                        <p>Donaciones Recibidas</p>
+                    </div>
+                    <div class="counter-item card-glass text-center">
+                        <div class="counter-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3 class="counter-number" data-target="85">0</h3>
+                        <p>Emprendedores de Tercera Edad Activos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 4: TIENDA SOLIDARIA -->
+        <section id="tienda" class="shop-section section-padding">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Tienda Solidaria</span>
+                    <h2 class="section-title">Compra con Propósito</h2>
+                    <p class="section-description-text">Cada producto ha sido elaborado a mano por beneficiarios de nuestros programas. El 100% de las ventas va destinado a financiar sus empleos.</p>
+                </div>
+
+                <div class="shop-grid grid-3 scroll-reveal">
+                    <!-- Producto 1 -->
+                    <div class="product-card-item card-glass" data-id="1" data-name="Pañoleta de la Esperanza" data-price="25000">
+                        <div class="product-image-box">
+                            <img src="assets/product-scarf.png" alt="Pañoleta de la Esperanza tejida a mano con hilos verde, azul y dorado" class="product-img" loading="lazy">
+                            <span class="product-badge bg-green">Tercera Edad</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Pañoleta de la Esperanza</h3>
+                            <p class="product-item-desc">Hermosa pañoleta artesanal tejida a mano por adultos mayores. Colores vibrantes y algodón hipoalergénico.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$25.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(1)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="product-card-item card-glass" data-id="2" data-name="Kit Táctico de Superación" data-price="35000">
+                        <div class="product-image-box">
+                            <img src="assets/product-tactical.png" alt="Pulsera táctica paracord tejida con hilos azul y rojo de alta resistencia" class="product-img" loading="lazy">
+                            <span class="product-badge bg-blue">Víctimas de Minas</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Kit Táctico de Superación</h3>
+                            <p class="product-item-desc">Pulsera paracord de supervivencia tejida por víctimas de minas. Incluye silbato y broche metálico de alta resistencia.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$35.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(2)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="product-card-item card-glass" data-id="3" data-name="Escultura Vencejo en Vuelo" data-price="80000">
+                        <div class="product-image-box">
+                            <img src="assets/product-craft.png" alt="Escultura en madera tallada con la forma de un vencejo volando" class="product-img" loading="lazy">
+                            <span class="product-badge bg-gold">Artesanos con Discapacidad</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Escultura Vencejo en Vuelo</h3>
+                            <p class="product-item-desc">Figura tallada artísticamente en madera por personas con discapacidad motriz. Símbolo de libertad y resiliencia.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$80.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(3)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 5: GALERÍA DE SUPERACIÓN -->
+        <section id="galeria" class="gallery-section section-padding bg-light-alt">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Nuestra Galería</span>
+                    <h2 class="section-title">Instantes de Integración y Alegría</h2>
+                    <p class="section-description-text">Una ventana visual a los momentos significativos de nuestros talleres, deportes y celebraciones.</p>
+                </div>
+
+                <!-- Filtros Galeria -->
+                <div class="gallery-filters text-center scroll-reveal">
+                    <button class="filter-btn active" data-filter="all" aria-label="Mostrar todas las fotos">Todos</button>
+                    <button class="filter-btn" data-filter="programas" aria-label="Mostrar fotos de programas">Programas</button>
+                    <button class="filter-btn" data-filter="deporte" aria-label="Mostrar fotos de deportes">Deporte Inclusivo</button>
+                    <button class="filter-btn" data-filter="comunidad" aria-label="Mostrar fotos de comunidad">Comunidad</button>
+                </div>
+
+                <!-- Grid Masonry Galeria -->
+                <div class="gallery-masonry scroll-reveal" id="gallery-grid">
+                    <div class="gallery-item show" data-category="programas">
+                        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=600&auto=format&fit=crop" alt="Jóvenes en silla de ruedas y adultos mayores en un taller educativo y creativo" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Talleres de Confección</h4>
+                            <p>Emprendedores tejiendo la Pañoleta de la Esperanza</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item show" data-category="deporte">
+                        <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a27?q=80&w=600&auto=format&fit=crop" alt="Entrenamiento de carrera inclusiva con prótesis en pista deportiva al aire libre" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Carrera Inclusiva</h4>
+                            <p>Superando límites en el atletismo adaptado</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item show" data-category="comunidad">
+                        <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=600&auto=format&fit=crop" alt="Grupo sonriente de voluntarios y ancianos recibiendo mercados de apoyo social" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Apoyo Alimentario</h4>
+                            <p>Entrega de kits nutricionales en Soledad, Atlántico</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item show" data-category="programas">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" alt="Adultos mayores aprendiendo alfabetización digital y uso de computadores en el centro comunitario" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Capacitación Digital</h4>
+                            <p>Inclusión tecnológica para adultos mayores</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item show" data-category="deporte">
+                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=600&auto=format&fit=crop" alt="Equipo de baloncesto en silla de ruedas celebrando un triunfo juntos en la cancha" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Torneo de Baloncesto Adaptado</h4>
+                            <p>Deporte como motor de empoderamiento e integración</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item show" data-category="comunidad">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=600&auto=format&fit=crop" alt="Voluntarios y miembros de la fundación tomados de la mano en círculo en una sesión de apoyo emocional" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Círculos de Apoyo</h4>
+                            <p>Fortalecimiento psicosocial de víctimas de minas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 6: SECCIÓN DE VIDEOS -->
+        <section id="videos" class="videos-section section-padding">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Nuestros Testimonios en Video</span>
+                    <h2 class="section-title">Historias que Inspiran</h2>
+                    <p class="section-description-text">Mira el testimonio en video de cómo la Fundación Vive Vencejo ha transformado el rumbo de decenas de personas en Soledad.</p>
+                </div>
+
+                <div class="video-container scroll-reveal">
+                    <div class="video-thumbnail-wrapper" id="video-wrapper">
+                        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140e2b8?q=80&w=1200&auto=format&fit=crop" alt="Miniatura del video de testimonios con personas sonriendo abrazadas" class="video-thumbnail" loading="lazy">
+                        <div class="video-overlay-btn">
+                            <button class="play-btn" id="play-video-btn" aria-label="Reproducir video testimonial de la Fundación">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- El iframe de Youtube se inyecta con JS para optimizar la velocidad de carga inicial -->
+                    <div class="video-iframe-container" id="video-iframe-container"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 7: TESTIMONIOS (CARRUSEL) -->
+        <section id="testimonios" class="testimonials-section section-padding bg-light-alt">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Voces de Esperanza</span>
+                    <h2 class="section-title">Lo Que Dice Nuestra Comunidad</h2>
+                    <p class="section-description-text">Testimonios honestos de quienes día a día demuestran que vencer los obstáculos es una realidad conjunta.</p>
+                </div>
+
+                <div class="carousel-container scroll-reveal">
+                    <div class="carousel-wrapper" id="carousel-wrapper">
+                        <!-- Testimonio 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-card card-glass">
+                                <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                                <p class="testimonial-text">
+                                    "Perder mi pierna por una mina antipersonal en el campo me hizo sentir que mi vida productiva había acabado. En la Fundación Vive Vencejo encontré un nuevo hogar, apoyo psicológico y me enseñaron a tejer artículos tácticos. Hoy soy autosuficiente y lidero el equipo de deporte adaptado."
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Retrato de Carlos Mendoza, beneficiario de la fundación" class="author-img" loading="lazy">
+                                    <div>
+                                        <h4 class="author-name">Carlos Mendoza</h4>
+                                        <p class="author-role">Beneficiario - Víctima de Mina Antipersonal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonio 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card card-glass">
+                                <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                                <p class="testimonial-text">
+                                    "A mis 72 años, conseguir empleo era imposible. Aquí me enseñaron a confeccionar pañoletas y hoy genero un ingreso digno vendiendo mi trabajo en la tienda solidaria. Me siento útil, activa y rodeada de una hermosa familia que me valora."
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt="Retrato de Elena Rocha, emprendedora de la tercera edad" class="author-img" loading="lazy">
+                                    <div>
+                                        <h4 class="author-name">Elena Rocha</h4>
+                                        <p class="author-role">Emprendedora de la Tercera Edad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonio 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card card-glass">
+                                <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                                <p class="testimonial-text">
+                                    "Apoyar a Vive Vencejo es ver que cada peso donado va directo a cambiar realidades palpables. Las personas con discapacidad en Soledad no quieren caridad, quieren oportunidades de trabajar y desarrollarse, y eso es exactamente lo que esta fundación ofrece."
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Retrato de Dra. María Fernanda Hoyos, donante y aliada corporativa" class="author-img" loading="lazy">
+                                    <div>
+                                        <h4 class="author-name">Dra. María F. Hoyos</h4>
+                                        <p class="author-role">Donante & Aliada Corporativa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Navegación del Carrusel -->
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev-btn" id="prev-testimonial" aria-label="Testimonio anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="carousel-dots" id="carousel-dots">
+                            <span class="dot active" data-index="0" aria-label="Ver testimonio 1"></span>
+                            <span class="dot" data-index="1" aria-label="Ver testimonio 2"></span>
+                            <span class="dot" data-index="2" aria-label="Ver testimonio 3"></span>
+                        </div>
+                        <button class="carousel-btn next-btn" id="next-testimonial" aria-label="Siguiente testimonio"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 8: CÓMO AYUDARNOS (DONACIONES / VOLUNTARIADO) -->
+        <section id="donar" class="donate-section section-padding">
+            <div class="container grid-2">
+                <div class="donate-info-box scroll-reveal-left">
+                    <span class="section-subtitle color-white">Tú Haces la Diferencia</span>
+                    <h2 class="section-title color-white">¿Cómo Puedes Unirte a Nuestra Causa?</h2>
+                    <p class="donate-description color-white-muted">
+                        Existen múltiples formas de apoyarnos para seguir construyendo oportunidades y rompiendo límites. Elige la que mejor se adapte a ti:
+                    </p>
+
+                    <div class="donation-options">
+                        <div class="option-item">
+                            <div class="option-icon bg-green"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                            <div>
+                                <h4 class="color-white">Donación Económica Única o Mensual</h4>
+                                <p class="color-white-muted">Permite financiar la compra de insumos de tejeduría, madera y el pago de prótesis y entrenamientos.</p>
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="option-icon bg-blue"><i class="fa-solid fa-users-gear"></i></div>
+                            <div>
+                                <h4 class="color-white">Voluntariado Social y Profesional</h4>
+                                <p class="color-white-muted">Comparte tus conocimientos técnicos, capacitaciones o apoya a nivel deportivo y logístico.</p>
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="option-icon bg-gold"><i class="fa-solid fa-basket-shopping"></i></div>
+                            <div>
+                                <h4 class="color-white">Compra en la Tienda Solidaria</h4>
+                                <p class="color-white-muted">Compra los productos elaborados a mano por nuestros emprendedores en la sección superior.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donate-form-wrapper scroll-reveal-right">
+                    <div class="donate-form-card card-glass">
+                        <h3 class="donate-form-title text-center"><i class="fa-solid fa-heart icon-red"></i> Aporte Solidario Seguro</h3>
+                        <p class="text-center donate-form-subtitle">Selecciona o ingresa el monto que deseas aportar</p>
+                        
+                        <div class="amount-selectors">
+                            <button class="amount-btn active" data-amount="20000">$20.000 COP</button>
+                            <button class="amount-btn" data-amount="50000">$50.000 COP</button>
+                            <button class="amount-btn" data-amount="100000">$100.000 COP</button>
+                            <button class="amount-btn" data-custom="true">Otro Valor</button>
+                        </div>
+
+                        <div class="custom-amount-container" id="custom-amount-box" style="display: none;">
+                            <label for="custom-amount-input">Valor a Donar (COP)</label>
+                            <div class="input-wrapper">
+                                <span class="currency-symbol">$</span>
+                                <input type="number" id="custom-amount-input" min="5000" placeholder="Monto mínimo $5.000">
+                            </div>
+                        </div>
+
+                        <div class="payment-methods text-center">
+                            <p class="payment-methods-title">Medios de Pago Soportados</p>
+                            <div class="payment-icons">
+                                <i class="fa-brands fa-cc-visa" aria-label="Visa"></i>
+                                <i class="fa-brands fa-cc-mastercard" aria-label="Mastercard"></i>
+                                <i class="fa-solid fa-money-bill-transfer" aria-label="Transferencia Bancaria"></i>
+                                <i class="fa-solid fa-mobile-screen-button" aria-label="Nequi o Daviplata"></i>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-donate-submit btn-primary-gradient" id="donate-submit-btn">Realizar Donación Segura</button>
+                        <p class="donate-secure-notice"><i class="fa-solid fa-shield-halved"></i> Transacción segura y protegida bajo el NIT 900.774.341-2.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 9: CONTACTO -->
+        <section id="contacto" class="contact-section section-padding bg-light-alt">
+            <div class="container">
+                <div class="section-header text-center scroll-reveal">
+                    <span class="section-subtitle">Contacta con Nosotros</span>
+                    <h2 class="section-title">Estamos Listos para Escucharte</h2>
+                    <p class="section-description-text">¿Quieres unirte como voluntario, tienes dudas sobre las donaciones o deseas realizar un pedido personalizado? Escríbenos.</p>
+                </div>
+
+                <div class="contact-grid grid-2">
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-container card-glass scroll-reveal-left">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Nombre Completo <span class="required">*</span></label>
+                                <input type="text" id="contact-name" name="name" required placeholder="Ingresa tu nombre y apellido">
+                            </div>
+
+                            <div class="form-group grid-2-form">
+                                <div>
+                                    <label for="contact-email">Correo Electrónico <span class="required">*</span></label>
+                                    <input type="email" id="contact-email" name="email" required placeholder="ejemplo@correo.com">
+                                </div>
+                                <div>
+                                    <label for="contact-phone">Teléfono de Contacto</label>
+                                    <input type="tel" id="contact-phone" name="phone" placeholder="Ej: 310 496 7407">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-subject">Asunto <span class="required">*</span></label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="donaciones">Información de Donaciones</option>
+                                    <option value="voluntariado">Postulación a Voluntariado</option>
+                                    <option value="tienda">Dudas de la Tienda Solidaria</option>
+                                    <option value="alianza">Alianzas Corporativas</option>
+                                    <option value="otro">Otro Asunto</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Mensaje <span class="required">*</span></label>
+                                <textarea id="contact-message" name="message" rows="5" required placeholder="Escribe aquí tu mensaje en detalle..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-submit-contact btn-primary-gradient">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Datos y Mapa de Contacto -->
+                    <div class="contact-info-container scroll-reveal-right">
+                        <div class="info-details-box card-glass">
+                            <h3>Información Oficial</h3>
+                            <ul class="info-list">
+                                <li>
+                                    <div class="info-icon bg-green"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div>
+                                        <h4>Dirección</h4>
+                                        <p>Soledad, Atlántico, Colombia</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-icon bg-blue"><i class="fa-solid fa-phone"></i></div>
+                                    <div>
+                                        <h4>Línea Telefónica / WhatsApp</h4>
+                                        <p><a href="tel:3104967407" class="hover-link">310 496 7407</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-icon bg-gold"><i class="fa-solid fa-envelope"></i></div>
+                                    <div>
+                                        <h4>Correo Electrónico</h4>
+                                        <p><a href="mailto:info@vivevencejo.org" class="hover-link">info@vivevencejo.org</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-icon bg-red-light"><i class="fa-solid fa-circle-info icon-red"></i></div>
+                                    <div>
+                                        <h4>Identificación Tributaria</h4>
+                                        <p>NIT 900.774.341-2 (Sin Ánimo de Lucro)</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="social-networks-box">
+                                <h4>Síguenos en Redes Sociales</h4>
+                                <div class="social-links-row">
+                                    <a href="https://facebook.com" class="social-btn facebook" aria-label="Síguenos en Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://instagram.com" class="social-btn instagram" aria-label="Síguenos en Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://youtube.com" class="social-btn youtube" aria-label="Visita nuestro canal de Youtube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Iframe de Mapa Google Maps en Soledad, Atlántico -->
+                        <div class="map-wrapper card-glass">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.4728956976935!2d-74.77093202404098!3d10.927663289230507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef43ded4a7df42d%3A0x6bcfd3ff698cbfae!2sSoledad%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1716075600000!5m2!1ses!2sco" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0; border-radius: 12px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Mapa de ubicación de la Fundación en Soledad, Atlántico, Colombia">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+        <div class="footer-top-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-40.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container footer-container grid-4">
+            <div class="footer-col-brand">
+                <a href="#" class="logo footer-logo" aria-label="Fundación Vive Vencejo Inicio">
+                    <span class="logo-accent"><i class="fa-solid fa-dove"></i></span>
+                    <span class="logo-text color-white">Vive Vencejo</span>
+                </a>
+                <p class="footer-about-text">
+                    Organización sin ánimo de lucro dedicada al desarrollo integral de personas con discapacidad, víctimas de minas y ancianos en Soledad, Atlántico. NIT 900.774.341-2.
+                </p>
+                <p class="footer-slogan-italic">“Venceremos Juntos los Obstáculos”</p>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+                    <li><a href="#quienes-somos"><i class="fa-solid fa-chevron-right"></i> Quiénes Somos</a></li>
+                    <li><a href="#programas"><i class="fa-solid fa-chevron-right"></i> Nuestros Programas</a></li>
+                    <li><a href="#tienda"><i class="fa-solid fa-chevron-right"></i> Tienda Solidaria</a></li>
+                    <li><a href="#galeria"><i class="fa-solid fa-chevron-right"></i> Galería</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Cómo Apoyar</h4>
+                <ul>
+                    <li><a href="#donar"><i class="fa-solid fa-chevron-right"></i> Realizar Donación</a></li>
+                    <li><a href="#contacto"><i class="fa-solid fa-chevron-right"></i> Postular Voluntariado</a></li>
+                    <li><a href="#tienda"><i class="fa-solid fa-chevron-right"></i> Comprar Artesanías</a></li>
+                    <li><a href="#contacto"><i class="fa-solid fa-chevron-right"></i> Alianzas Sociales</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-contact">
+                <h4>Contacto Directo</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Soledad, Atlántico, Colombia</li>
+                    <li><i class="fa-solid fa-phone"></i> +57 310 496 7407</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@vivevencejo.org</li>
+                    <li><i class="fa-solid fa-clock"></i> Lun - Sáb: 8:00 AM - 5:00 PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright-text">&copy; 2026 Fundación Vive Vencejo. Todos los derechos reservados. Desarrollado con fin social.</p>
+                <div class="footer-policies">
+                    <a href="#" class="hover-link">Política de Privacidad</a>
+                    <span class="bullet-divider">&bull;</span>
+                    <a href="#" class="hover-link">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- PANEL LATERAL DESLIZANTE DEL CARRITO DE COMPRAS -->
+    <div class="cart-sidebar-overlay" id="cart-overlay" role="presentation"></div>
+    <section class="cart-sidebar" id="cart-sidebar" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="cart-header">
+            <h3 id="cart-title"><i class="fa-solid fa-shopping-basket"></i> Tu Compra Solidaria</h3>
+            <button class="cart-close-btn" id="cart-close" aria-label="Cerrar carrito de compras"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="cart-body" id="cart-items-container">
+            <!-- Los artículos agregados se inyectarán aquí con JavaScript -->
+            <div class="cart-empty-message" id="cart-empty-msg">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Tu carrito está vacío.</p>
+                <p class="empty-notice">¡Apoya el talento de nuestros beneficiarios agregando algún producto de la tienda!</p>
+                <a href="#tienda" class="btn btn-primary btn-sm" id="cart-go-shop">Ver Tienda</a>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-subtotal-row">
+                <span>Subtotal:</span>
+                <span class="subtotal-amount" id="cart-subtotal">$0 COP</span>
+            </div>
+            <p class="shipping-notice"><i class="fa-solid fa-truck-fast"></i> Envío calculado al checkout (Despachos nacionales)</p>
+            <div class="cart-actions-row">
+                <button class="btn btn-checkout btn-primary-gradient" id="btn-checkout-trigger"><i class="fa-solid fa-credit-card"></i> Iniciar Pago Seguro</button>
+                <button class="btn btn-whatsapp-checkout btn-whatsapp" id="btn-checkout-wa"><i class="fa-brands fa-whatsapp"></i> Finalizar por WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODAL DE CHECKOUT SIMULADO -->
+    <div class="checkout-modal-overlay" id="checkout-overlay" role="presentation"></div>
+    <div class="checkout-modal card-glass" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" aria-hidden="true">
+        <button class="checkout-close-btn" id="checkout-close" aria-label="Cerrar formulario de pago"><i class="fa-solid fa-xmark"></i></button>
+        <h3 id="checkout-title" class="text-center"><i class="fa-solid fa-shield-halved icon-blue"></i> Formulario de Pago Seguro</h3>
+        <p class="text-center checkout-subtitle">Completa tus datos para finalizar tu compra solidaria</p>
+        
+        <div class="checkout-summary-box">
+            <h4>Resumen del Pedido</h4>
+            <div id="checkout-items-list"></div>
+            <div class="checkout-total-row">
+                <span>Total a Pagar:</span>
+                <strong id="checkout-total-val">$0 COP</strong>
+            </div>
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+            <div class="form-group">
+                <label for="checkout-name">Nombre Completo <span class="required">*</span></label>
+                <input type="text" id="checkout-name" required placeholder="Ej: Juan Pérez">
+            </div>
+            <div class="form-group grid-2-form">
+                <div>
+                    <label for="checkout-email">Correo Electrónico <span class="required">*</span></label>
+                    <input type="email" id="checkout-email" required placeholder="ejemplo@correo.com">
+                </div>
+                <div>
+                    <label for="checkout-phone">Teléfono Móvil <span class="required">*</span></label>
+                    <input type="tel" id="checkout-phone" required placeholder="Ej: 310 496 7407">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="checkout-address">Dirección de Entrega (con ciudad) <span class="required">*</span></label>
+                <input type="text" id="checkout-address" required placeholder="Ej: Calle 15 # 20-30, Soledad, Atlántico">
+            </div>
+
+            <div class="payment-tabs">
+                <div class="payment-tab active" id="tab-card"><i class="fa-solid fa-credit-card"></i> Tarjeta</div>
+                <div class="payment-tab" id="tab-pse"><i class="fa-solid fa-building-columns"></i> PSE</div>
+                <div class="payment-tab" id="tab-delivery"><i class="fa-solid fa-truck-ramp-box"></i> Contraentrega</div>
+            </div>
+
+            <!-- Contenedor Tarjeta -->
+            <div class="payment-details-tab-content" id="content-card">
+                <div class="form-group">
+                    <label for="card-num">Número de Tarjeta <span class="required">*</span></label>
+                    <input type="text" id="card-num" placeholder="0000 0000 0000 0000" maxlength="19">
+                </div>
+                <div class="form-group grid-2-form">
+                    <div>
+                        <label for="card-expiry">Vencimiento <span class="required">*</span></label>
+                        <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div>
+                        <label for="card-cvv">CVC/CVV <span class="required">*</span></label>
+                        <input type="password" id="card-cvv" placeholder="123" maxlength="4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenedor PSE -->
+            <div class="payment-details-tab-content" id="content-pse" style="display: none;">
+                <div class="form-group">
+                    <label for="pse-bank">Selecciona tu Banco <span class="required">*</span></label>
+                    <select id="pse-bank">
+                        <option value="" disabled selected>Elige una entidad financiera</option>
+                        <option value="bancolombia">Bancolombia</option>
+                        <option value="davivienda">Davivienda</option>
+                        <option value="bogota">Banco de Bogotá</option>
+                        <option value="nequi">Nequi</option>
+                        <option value="daviplata">Daviplata</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contenedor Contraentrega -->
+            <div class="payment-details-tab-content" id="content-delivery" style="display: none;">
+                <p class="delivery-notice-text"><i class="fa-solid fa-circle-exclamation"></i> Recibirás tu producto en la dirección ingresada y realizarás el pago en efectivo directamente al transportador (Válido para Soledad y Barranquilla).</p>
+            </div>
+
+            <button type="submit" class="btn btn-payment-finish btn-primary-gradient">Confirmar y Finalizar Compra Solidaria <i class="fa-solid fa-lock"></i></button>
+            <p class="checkout-footer-notice"><i class="fa-solid fa-lock"></i> Tu información financiera está cifrada y es procesada de forma segura por pasarelas aliadas certificadas (PCI-DSS).</p>
+        </form>
+    </div>
+
+
+    <!-- NOTIFICACIONES TOAST (PARA ACCIONES COMO AGREGAR AL CARRITO O ENVIAR FORMULARIO) -->
+    <div class="toast-container" id="toast-container"></div>
+
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/573104967407?text=Hola%20Fundaci%C3%B3n%20Vive%20Vencejo%2C%20quiero%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20ayudar%20o%20adquirir%20artesan%C3%ADas." 
+       class="whatsapp-float-btn" 
+       target="_blank" 
+       rel="noopener" 
+       aria-label="Abrir chat de WhatsApp con la Fundación Vive Vencejo">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <span class="whatsapp-tooltip">¡Escríbenos!</span>
+    </a>
+
+    <!-- JS Principal -->
+    <script src="app.js"></script>
+</body>
+</html>
