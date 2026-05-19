@@ -21,7 +21,7 @@
     <meta property="twitter:description" content="Apoyamos a personas con discapacidad, víctimas de minas antipersonales y emprendedores de la tercera edad en Colombia. Descubre cómo ayudar hoy.">
     <meta property="twitter:image" content="assets/hero-community.png">
 
-    <title>Fundación Vive Vencejo | Venceremos Juntos los Obstáculos</title>
+    <title>Red de Organizaciones Sociales | Venceremos Juntos los Obstáculos</title>
 
     <!-- Google Fonts: Outfit (headings) & Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,28 +44,29 @@
     <!-- CABECERA Y NAVEGACIÓN -->
     <header class="main-header" id="header">
         <div class="header-container container">
-            <a href="#" class="logo" aria-label="Fundación Vive Vencejo Inicio">
+            <a href="#portal-inicio" class="logo" aria-label="Portal de Organizaciones Sociales - Inicio">
                 <span class="logo-accent"><i class="fa-solid fa-dove"></i></span>
-                <span class="logo-text">Vive Vencejo</span>
+                <span class="logo-text">Red Social</span>
             </a>
 
-            <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
-                <ul>
-                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                    <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
-                    <li><a href="#programas" class="nav-link">Programas</a></li>
-                    <li><a href="#tienda" class="nav-link">Tienda Solidaria</a></li>
-                    <li><a href="#galeria" class="nav-link">Galería</a></li>
-                    <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="#donar" class="btn-donate-nav btn btn-primary-gradient">Cómo Ayudar</a>
-                    <button class="cart-trigger" id="cart-trigger" aria-label="Ver carrito de compras, 0 artículos" aria-haspopup="dialog">
-                        <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="cart-badge" id="cart-count">0</span>
-                    </button>
-                </div>
+            <!-- TABS DE ORGANIZACIONES (MENÚ PRINCIPAL) -->
+            <nav class="org-tabs-nav" id="org-tabs-nav" aria-label="Seleccionar organización">
+                <button class="org-tab active" data-panel="panel-vencejo" id="tab-vencejo" aria-selected="true">
+                    <i class="fa-solid fa-dove"></i>
+                    <span>Fundación Vive Vencejo</span>
+                </button>
+                <button class="org-tab" data-panel="panel-fenix" id="tab-fenix" aria-selected="false">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <span>Corporación Ave Fénix</span>
+                </button>
+                <button class="org-tab" data-panel="panel-orianela" id="tab-orianela" aria-selected="false">
+                    <i class="fa-solid fa-seedling"></i>
+                    <span>Fundación Orianela Renacer</span>
+                </button>
+                <button class="org-tab" data-panel="panel-turismo" id="tab-turismo" aria-selected="false">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <span>Turismo El Triunfo del Cañón</span>
+                </button>
             </nav>
 
             <div class="header-buttons-mobile">
@@ -73,16 +74,45 @@
                     <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
                     <span class="cart-badge" id="cart-count-mobile">0</span>
                 </button>
-                <button class="hamburger-menu" id="hamburger-menu" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
+                <button class="hamburger-menu" id="hamburger-menu" aria-expanded="false" aria-controls="org-tabs-nav" aria-label="Abrir menú de organizaciones">
                     <span class="hamburger-bar"></span>
                     <span class="hamburger-bar"></span>
                     <span class="hamburger-bar"></span>
                 </button>
             </div>
+
+            <!-- Carrito (desktop) -->
+            <div class="nav-actions desktop-cart">
+                <button class="cart-trigger" id="cart-trigger" aria-label="Ver carrito de compras, 0 artículos" aria-haspopup="dialog">
+                    <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+            </div>
         </div>
     </header>
 
+    <!-- ANCLA DE INICIO DEL PORTAL -->
+    <div id="portal-inicio"></div>
+
     <main id="main-content">
+
+        <!-- ==========================================
+             PANEL 1: FUNDACIÓN VIVE VENCEJO
+             ========================================== -->
+        <div id="panel-vencejo" class="org-panel active" role="region" aria-labelledby="tab-vencejo">
+
+        <!-- BOTONES DE NAVEGACIÓN INTERNA (VENCEJO) -->
+        <div class="panel-nav-bar" id="panel-vencejo-nav">
+            <div class="container panel-nav-inner">
+                <a href="#panel-vencejo-top" class="panel-nav-btn" aria-label="Ir al inicio de Fundación Vive Vencejo">
+                    <i class="fa-solid fa-house"></i> Inicio Fundación
+                </a>
+                <a href="#portal-inicio" class="panel-nav-btn panel-nav-btn--top" aria-label="Ir al inicio general de la página">
+                    <i class="fa-solid fa-arrow-up"></i> Inicio General
+                </a>
+            </div>
+        </div>
+        <div id="panel-vencejo-top"></div>
 
         <!-- SECCIÓN 1: HERO / INICIO -->
         <section id="inicio" class="hero-section">
@@ -678,6 +708,113 @@
                 </div>
             </div>
         </section>
+
+        </div><!-- /panel-vencejo -->
+
+
+        <!-- ==========================================
+             PANEL 2: CORPORACIÓN AVE FÉNIX
+             ========================================== -->
+        <div id="panel-fenix" class="org-panel" role="region" aria-labelledby="tab-fenix">
+
+            <!-- BOTONES DE NAVEGACIÓN INTERNA (FÉNIX) -->
+            <div class="panel-nav-bar">
+                <div class="container panel-nav-inner">
+                    <a href="#panel-fenix-top" class="panel-nav-btn" aria-label="Ir al inicio de Corporación Ave Fénix">
+                        <i class="fa-solid fa-house"></i> Inicio Corporación
+                    </a>
+                    <a href="#portal-inicio" class="panel-nav-btn panel-nav-btn--top" aria-label="Ir al inicio general de la página">
+                        <i class="fa-solid fa-arrow-up"></i> Inicio General
+                    </a>
+                </div>
+            </div>
+            <div id="panel-fenix-top"></div>
+
+            <!-- Contenido próximamente -->
+            <section class="coming-soon-section section-padding">
+                <div class="container text-center">
+                    <div class="coming-soon-card card-glass">
+                        <div class="coming-soon-icon" style="--org-color: hsl(20, 90%, 50%)">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                        </div>
+                        <h2 class="coming-soon-title">Corporación Ave Fénix</h2>
+                        <p class="coming-soon-text">Estamos construyendo el espacio digital de esta organización. Pronto encontrarás aquí toda la información sobre sus programas, impacto social y formas de apoyar.</p>
+                        <span class="coming-soon-badge"><i class="fa-solid fa-clock"></i> Próximamente</span>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- /panel-fenix -->
+
+
+        <!-- ==========================================
+             PANEL 3: FUNDACIÓN ORIANELA RENACER
+             ========================================== -->
+        <div id="panel-orianela" class="org-panel" role="region" aria-labelledby="tab-orianela">
+
+            <!-- BOTONES DE NAVEGACIÓN INTERNA (ORIANELA) -->
+            <div class="panel-nav-bar">
+                <div class="container panel-nav-inner">
+                    <a href="#panel-orianela-top" class="panel-nav-btn" aria-label="Ir al inicio de Fundación Orianela Renacer">
+                        <i class="fa-solid fa-house"></i> Inicio Fundación
+                    </a>
+                    <a href="#portal-inicio" class="panel-nav-btn panel-nav-btn--top" aria-label="Ir al inicio general de la página">
+                        <i class="fa-solid fa-arrow-up"></i> Inicio General
+                    </a>
+                </div>
+            </div>
+            <div id="panel-orianela-top"></div>
+
+            <!-- Contenido próximamente -->
+            <section class="coming-soon-section section-padding">
+                <div class="container text-center">
+                    <div class="coming-soon-card card-glass">
+                        <div class="coming-soon-icon" style="--org-color: hsl(142, 72%, 29%)">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h2 class="coming-soon-title">Fundación Orianela Renacer</h2>
+                        <p class="coming-soon-text">Este espacio está reservado para presentar los proyectos, beneficiarios y la misión de la Fundación Orianela Renacer. Muy pronto podrás conocer todo sobre su labor transformadora.</p>
+                        <span class="coming-soon-badge"><i class="fa-solid fa-clock"></i> Próximamente</span>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- /panel-orianela -->
+
+
+        <!-- ==========================================
+             PANEL 4: TURISMO EL TRIUNFO DEL CAÑÓN
+             ========================================== -->
+        <div id="panel-turismo" class="org-panel" role="region" aria-labelledby="tab-turismo">
+
+            <!-- BOTONES DE NAVEGACIÓN INTERNA (TURISMO) -->
+            <div class="panel-nav-bar">
+                <div class="container panel-nav-inner">
+                    <a href="#panel-turismo-top" class="panel-nav-btn" aria-label="Ir al inicio de Turismo El Triunfo del Cañón">
+                        <i class="fa-solid fa-house"></i> Inicio Turismo
+                    </a>
+                    <a href="#portal-inicio" class="panel-nav-btn panel-nav-btn--top" aria-label="Ir al inicio general de la página">
+                        <i class="fa-solid fa-arrow-up"></i> Inicio General
+                    </a>
+                </div>
+            </div>
+            <div id="panel-turismo-top"></div>
+
+            <!-- Contenido próximamente -->
+            <section class="coming-soon-section section-padding">
+                <div class="container text-center">
+                    <div class="coming-soon-card card-glass">
+                        <div class="coming-soon-icon" style="--org-color: hsl(217, 89%, 45%)">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                        </div>
+                        <h2 class="coming-soon-title">Turismo El Triunfo del Cañón</h2>
+                        <p class="coming-soon-text">Descubre muy pronto los paisajes, recorridos y experiencias únicas que ofrece El Triunfo del Cañón. Este espacio reunirá toda la oferta turística y las formas de reservar tu aventura.</p>
+                        <span class="coming-soon-badge"><i class="fa-solid fa-clock"></i> Próximamente</span>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- /panel-turismo -->
 
     </main>
 

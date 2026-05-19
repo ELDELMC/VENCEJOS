@@ -24,13 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================================================
-   1. NAVEGACIÓN Y MENÚ MÓVIL
+   1. NAVEGACIÓN Y TABS ORGANIZACIONALES
    ========================================================================== */
 function initNavigation() {
     const header = document.getElementById("header");
     const hamburger = document.getElementById("hamburger-menu");
-    const navMenu = document.getElementById("nav-menu");
-    const navLinks = document.querySelectorAll(".nav-link");
+    const orgTabsNav = document.getElementById("org-tabs-nav");
+    const orgTabs = document.querySelectorAll(".org-tab");
+    const orgPanels = document.querySelectorAll(".org-panel");
 
     // Efecto Scroll en Cabecera
     window.addEventListener("scroll", () => {
@@ -41,29 +42,49 @@ function initNavigation() {
         }
     });
 
-    // Toggle Menú Móvil
-    if (hamburger && navMenu) {
-        hamburger.addEventListener("click", () => {
-            const isOpen = navMenu.classList.toggle("open");
-            hamburger.classList.toggle("open");
-            hamburger.setAttribute("aria-expanded", isOpen);
-        });
-    }
+    // Lógica de cambio de tabs organizacionales
+    orgTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            const targetPanelId = tab.getAttribute("data-panel");
 
-    // Cerrar Menú al hacer click en enlaces & actualizar enlace activo
-    navLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-            navLinks.forEach(l => l.classList.remove("active"));
-            link.classList.add("active");
+            // Actualizar tabs activos
+            orgTabs.forEach(t => {
+                t.classList.remove("active");
+                t.setAttribute("aria-selected", "false");
+            });
+            tab.classList.add("active");
+            tab.setAttribute("aria-selected", "true");
 
-            if (navMenu.classList.contains("open")) {
-                navMenu.classList.remove("open");
+            // Mostrar panel correspondiente, ocultar el resto
+            orgPanels.forEach(panel => {
+                panel.classList.remove("active");
+            });
+            const targetPanel = document.getElementById(targetPanelId);
+            if (targetPanel) {
+                targetPanel.classList.add("active");
+                // Scroll suave al inicio del panel
+                targetPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+
+            // Cerrar menú móvil si está abierto
+            if (orgTabsNav && orgTabsNav.classList.contains("open")) {
+                orgTabsNav.classList.remove("open");
                 hamburger.classList.remove("open");
                 hamburger.setAttribute("aria-expanded", "false");
             }
         });
     });
+
+    // Toggle Menú Móvil (hamburguesa)
+    if (hamburger && orgTabsNav) {
+        hamburger.addEventListener("click", () => {
+            const isOpen = orgTabsNav.classList.toggle("open");
+            hamburger.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+        });
+    }
 }
+
 
 /* ==========================================================================
    2. EFECTOS DE SCROLL Y ANIMACIONES (SCROLL REVEAL)
