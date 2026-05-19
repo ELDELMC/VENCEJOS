@@ -103,17 +103,17 @@ function initNavigation() {
 function initScrollEffects() {
     const revealElements = document.querySelectorAll(".scroll-reveal, .scroll-reveal-left, .scroll-reveal-right");
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("active");
-                observer.unobserve(entry.target); // Animación ocurre solo una vez
+                obs.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    // Exportar para uso en catalog.js
+    window._scrollObserver = observer;
 
     revealElements.forEach(el => observer.observe(el));
 }
