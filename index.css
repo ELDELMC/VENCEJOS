@@ -1510,9 +1510,17 @@ button {
     color: var(--color-white);
     text-transform: uppercase;
 }
-.bg-green { background-color: var(--color-primary-green); }
-.bg-blue { background-color: var(--color-secondary-blue); }
-.bg-gold { background-color: var(--color-accent-gold); }
+.bg-green  { background-color: var(--color-primary-green); }
+.bg-blue   { background-color: var(--color-secondary-blue); }
+.bg-gold   { background-color: var(--color-accent-gold); color: hsl(45, 90%, 20%) !important; }
+.bg-red    { background-color: var(--color-accent-red); }
+.bg-dark   { background-color: hsl(215, 28%, 22%); }
+
+/* Imagen con fit cover para productos Unsplash */
+.product-img-cover {
+    object-fit: cover;
+    object-position: center top;
+}
 
 .product-info-box {
     padding: 25px;
@@ -1556,6 +1564,28 @@ button {
 .product-card-item:hover .product-img {
     transform: scale(1.08);
 }
+
+/* Encabezado de categoría dentro de la tienda */
+.shop-category-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--color-primary-green-light), var(--color-secondary-blue-light));
+    border-radius: var(--border-radius-md);
+    border-left: 5px solid var(--color-primary-green);
+    font-family: var(--font-headings);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}
+.shop-category-header i {
+    font-size: 1.3rem;
+    color: var(--color-primary-green);
+}
+
+
 
 /* SECCIÓN 5: GALERÍA */
 .gallery-filters {

@@ -1,9 +1,20 @@
 // CONSTANTES DE PRODUCTOS DISPONIBLES
 const PRODUCTS = {
-    1: { name: "Pañoleta de la Esperanza", price: 25000, img: "assets/product-scarf.png" },
-    2: { name: "Kit Táctico de Superación", price: 35000, img: "assets/product-tactical.png" },
-    3: { name: "Escultura Vencejo en Vuelo", price: 80000, img: "assets/product-craft.png" }
+    1: { name: "Pañoleta de la Esperanza",      price: 25000,  img: "assets/product-scarf.png" },
+    2: { name: "Kit Táctico de Superación",      price: 35000,  img: "assets/product-tactical.png" },
+    3: { name: "Escultura Vencejo en Vuelo",     price: 80000,  img: "assets/product-craft.png" },
+    // EPP — Equipo de Protección Personal
+    4: { name: "Taser Eléctrico Táctico",        price: 85000,  img: "assets/product-taser.png" },
+    5: { name: "Gas Pimienta Compacto",          price: 28000,  img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=200&auto=format&fit=crop" },
+    6: { name: "Bastón Tambo Telescópico",       price: 48000,  img: "https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=200&auto=format&fit=crop" },
+    7: { name: "Chaleco Antibalas Niv. IIIA",    price: 320000, img: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=200&auto=format&fit=crop" },
+    8: { name: "Navaja Táctica Plegable",        price: 55000,  img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=200&auto=format&fit=crop" },
+    9: { name: "Linterna Táctica LED 1200lm",    price: 65000,  img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=200&auto=format&fit=crop" },
+    10: { name: "Morral Táctico Modular 45L",   price: 125000, img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=200&auto=format&fit=crop" },
+    11: { name: "Placa Militar Personalizada",   price: 22000,  img: "https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?q=80&w=200&auto=format&fit=crop" },
+    12: { name: "Pantalón Camuflado Digital",    price: 98000,  img: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=200&auto=format&fit=crop" }
 };
+
 
 // ESTADO GLOBAL DE LA APLICACIÓN (CARRITO)
 let cart = {};

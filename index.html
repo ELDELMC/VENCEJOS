@@ -298,10 +298,16 @@
                 <div class="section-header text-center scroll-reveal">
                     <span class="section-subtitle">Tienda Solidaria</span>
                     <h2 class="section-title">Compra con Propósito</h2>
-                    <p class="section-description-text">Cada producto ha sido elaborado a mano por beneficiarios de nuestros programas. El 100% de las ventas va destinado a financiar sus empleos.</p>
+                    <p class="section-description-text">Cada producto ha sido elaborado o acondicionado por beneficiarios de nuestros programas. El 100% de las ventas financia sus empleos dignos. Explora nuestra selección de artesanías y equipo de protección personal.</p>
                 </div>
 
-                <div class="shop-grid grid-3 scroll-reveal">
+                <!-- Subtítulo categoría artesanías -->
+                <div class="shop-category-header scroll-reveal">
+                    <i class="fa-solid fa-hands-praying"></i>
+                    <span>Artesanías & Recuerdos</span>
+                </div>
+
+                <div class="shop-grid grid-3 scroll-reveal" style="margin-bottom: 60px;">
                     <!-- Producto 1 -->
                     <div class="product-card-item card-glass" data-id="1" data-name="Pañoleta de la Esperanza" data-price="25000">
                         <div class="product-image-box">
@@ -350,8 +356,161 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Subtítulo categoría EPP -->
+                <div class="shop-category-header scroll-reveal">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Equipo de Protección Personal (EPP)</span>
+                </div>
+
+                <div class="shop-grid grid-4 scroll-reveal">
+                    <!-- Producto 4: Taser -->
+                    <div class="product-card-item card-glass" data-id="4" data-name="Taser Eléctrico Táctico" data-price="85000">
+                        <div class="product-image-box">
+                            <img src="assets/product-taser.png" alt="Taser eléctrico táctico compacto de defensa personal" class="product-img" loading="lazy">
+                            <span class="product-badge bg-red">EPP Defensa</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Taser Eléctrico Táctico</h3>
+                            <p class="product-item-desc">Dispositivo de defensa eléctrica compacto. Funda de cuero incluida. Ensamblado por veteranos con discapacidad.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$85.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(4)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5: Gas Pimienta -->
+                    <div class="product-card-item card-glass" data-id="5" data-name="Gas Pimienta Compacto" data-price="28000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=600&auto=format&fit=crop" alt="Spray gas pimienta compacto naranja de defensa personal con llavero" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-red">EPP Defensa</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Gas Pimienta Compacto</h3>
+                            <p class="product-item-desc">Aerosol de pimienta con clip de seguridad y mosquetón. Alcance de 3 m. Verificado y empacado por nuestros beneficiarios.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$28.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(5)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6: Bastón Tambo -->
+                    <div class="product-card-item card-glass" data-id="6" data-name="Bastón Tambo Telescópico" data-price="48000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=600&auto=format&fit=crop" alt="Bastón tambo telescópico negro metálico para defensa personal" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-blue">EPP Defensa</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Bastón Tambo Telescópico</h3>
+                            <p class="product-item-desc">Bastón expansible de acero inoxidable. Se pliega a 26 cm y extiende a 65 cm. Funda de nylon incluida.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$48.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(6)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 7: Chaleco Antibalas -->
+                    <div class="product-card-item card-glass" data-id="7" data-name="Chaleco Antibalas Nivel IIIA" data-price="320000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600&auto=format&fit=crop" alt="Chaleco antibalas táctico negro nivel IIIA con placas molle" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-dark">EPP Premium</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Chaleco Antibalas Niv. IIIA</h3>
+                            <p class="product-item-desc">Chaleco táctico con sistema MOLLE y placas balisticas de nivel IIIA. Tallas S-XXL. Fabricado por veteranos reintegrados.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$320.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(7)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 8: Navaja -->
+                    <div class="product-card-item card-glass" data-id="8" data-name="Navaja Táctica Plegable" data-price="55000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=600&auto=format&fit=crop" alt="Navaja táctica plegable con mango negro y hoja de acero inoxidable" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-dark">EPP Herramienta</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Navaja Táctica Plegable</h3>
+                            <p class="product-item-desc">Hoja de acero inoxidable 440C, mango ergonómico antideslizante. Clip de bolsillo incluido. Acabado por artesanos con discapacidad motriz.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$55.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(8)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 9: Linterna Táctica -->
+                    <div class="product-card-item card-glass" data-id="9" data-name="Linterna Táctica LED 1200lm" data-price="65000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop" alt="Linterna táctica LED negra de alta potencia 1200 lúmenes con cabeza de zoom" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-blue">EPP Iluminación</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Linterna Táctica LED 1200lm</h3>
+                            <p class="product-item-desc">1200 lúmenes, 5 modos de luz. Resistente al agua IP67. Batería 18650 recargable incluida. Ensamblada artesanalmente.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$65.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(9)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 10: Morral Táctico -->
+                    <div class="product-card-item card-glass" data-id="10" data-name="Morral Táctico Modular 45L" data-price="125000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Morral táctico modular negro de 45 litros con sistema MOLLE y múltiples bolsillos" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-green">EPP Transporte</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Morral Táctico Modular 45L</h3>
+                            <p class="product-item-desc">45 litros de capacidad con sistema MOLLE externo. Material 600D Oxford resistente al agua. Confeccionado por nuestros beneficiarios.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$125.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(10)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 11: Placas Militares -->
+                    <div class="product-card-item card-glass" data-id="11" data-name="Placa Militar Personalizada" data-price="22000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?q=80&w=600&auto=format&fit=crop" alt="Placas militares de identificación personalizadas en acero inoxidable con cadena" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-gold">EPP Identificación</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Placa Militar Personalizada</h3>
+                            <p class="product-item-desc">Dog tags de acero inoxidable grabadas a láser con nombre, tipo de sangre y NIT de la fundación. Par con cadenas incluidas.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$22.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(11)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 12: Pantalón Camuflado -->
+                    <div class="product-card-item card-glass" data-id="12" data-name="Pantalón Camuflado Digital" data-price="98000">
+                        <div class="product-image-box">
+                            <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=600&auto=format&fit=crop" alt="Pantalón táctico camuflado digital multicam con bolsillos cargo reforzados" class="product-img product-img-cover" loading="lazy">
+                            <span class="product-badge bg-green">EPP Indumentaria</span>
+                        </div>
+                        <div class="product-info-box">
+                            <h3 class="product-item-title">Pantalón Camuflado Digital</h3>
+                            <p class="product-item-desc">Pantalón táctico tipo ripstop con camuflado digital Multicam. Bolsillos cargo reforzados. Tallas 28-42. Confeccionado por nuestros operarios.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">$98.000 COP</span>
+                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(12)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
 
 
         <!-- SECCIÓN 5: GALERÍA DE SUPERACIÓN -->
