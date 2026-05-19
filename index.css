@@ -827,6 +827,20 @@ button {
     color: var(--color-white);
 }
 
+/* Botón Catálogo — Dorado / Gold */
+.btn-catalog-outline {
+    color: hsl(45, 90%, 28%);
+    border: 2px solid var(--color-accent-gold);
+    background-color: var(--color-accent-gold-light);
+}
+.btn-catalog-outline:hover {
+    background-color: var(--color-accent-gold);
+    color: var(--color-white);
+    border-color: var(--color-accent-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px -4px hsla(45, 93%, 47%, 0.45);
+}
+
 /* Hero Image & Floating Cards */
 .hero-image-container {
     position: relative;
@@ -925,20 +939,343 @@ button {
     fill: var(--color-bg-light);
 }
 
-@media (max-width: 576px) {
+/* =================================================================
+   RESPONSIVE DESIGN — FUNDACIÓN VIVE VENCEJO (COMPLETO)
+   Breakpoints: xs <480  sm <640  md <768  lg <1024  xl <1280
+   ================================================================= */
+
+/* ---- TABLET GRANDE / LAPTOP PEQUEÑO (max 1024px) -------------- */
+@media (max-width: 1024px) {
+    .hero-section {
+        padding-top: calc(var(--header-height) + 60px);
+        padding-bottom: 80px;
+        min-height: auto;
+    }
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+    .hero-img {
+        height: 340px;
+    }
+    .card-impact {
+        left: 0;
+        bottom: -15px;
+    }
+    .card-location {
+        right: 0;
+        top: -15px;
+    }
+    /* Ocultar tarjetas flotantes en tablet para evitar desbordamiento */
+    .hero-card-floating {
+        display: none;
+    }
+}
+
+/* ---- TABLET (max 768px) ---------------------------------------- */
+@media (max-width: 768px) {
+    /* Tipografía base más compacta */
+    :root {
+        --header-height: 70px;
+    }
+    .section-padding {
+        padding: 70px 0;
+    }
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    /* Hero: columna única */
+    .hero-section {
+        padding-top: calc(var(--header-height) + 40px);
+        padding-bottom: 60px;
+        min-height: auto;
+        background-attachment: scroll; /* Evita parpadeo en iOS */
+    }
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    .hero-content {
+        order: 1;
+    }
+    .hero-image-container {
+        order: 2;
+    }
+    .hero-title {
+        font-size: 2.6rem;
     }
     .hero-slogan {
         font-size: 1.4rem;
     }
-    .card-impact {
-        left: 10px;
-        bottom: -30px;
+    .hero-description {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .card-location {
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-badge {
+        font-size: 0.78rem;
+    }
+    .hero-img {
+        height: 280px;
+    }
+    .hero-card-floating {
+        display: none;
+    }
+
+    /* Quiénes somos */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-content {
+        text-align: center;
+    }
+    .acrostic-box {
+        text-align: left;
+    }
+
+    /* Programas */
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .impact-counter-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Tienda */
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Donar */
+    .donate-section .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Contacto */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-group.grid-2-form {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* ---- MÓVIL (max 640px) ----------------------------------------- */
+@media (max-width: 640px) {
+    .container {
+        width: 94%;
+    }
+    .section-padding {
+        padding: 55px 0;
+    }
+    .section-title {
+        font-size: 1.7rem;
+    }
+    .section-description-text {
+        font-size: 0.98rem;
+    }
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+    .hero-slogan {
+        font-size: 1.2rem;
+    }
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-img {
+        height: 220px;
+    }
+
+    /* Programas en 1 columna */
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+    .impact-counter-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Tienda en 1 columna */
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Galería */
+    .gallery-masonry {
+        columns: 1;
+    }
+    .gallery-filters {
+        gap: 8px;
+    }
+    .filter-btn {
+        padding: 7px 14px;
+        font-size: 0.8rem;
+    }
+
+    /* Video */
+    .video-thumbnail {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /* Testimonios */
+    .testimonial-card {
+        padding: 28px 20px;
+    }
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    .carousel-nav {
+        gap: 12px;
+    }
+
+    /* Donar — botones de monto */
+    .amount-selectors {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer en 1 columna */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer-col-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 20px;
+    }
+    .footer-contact-list {
+        align-items: center;
+    }
+    .footer-bottom-flex {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    /* Carrito lateral */
+    .cart-sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Checkout modal */
+    .checkout-modal {
+        width: 96%;
+        padding: 30px 20px;
+        max-height: 92vh;
+    }
+    .grid-2-form {
+        grid-template-columns: 1fr;
+    }
+
+    /* Panel nav buttons */
+    .panel-nav-inner {
+        gap: 8px;
+    }
+    .panel-nav-btn {
+        font-size: 0.73rem;
+        padding: 6px 11px;
+    }
+
+    /* WhatsApp flotante más pequeño en móvil */
+    .whatsapp-float-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.7rem;
+        bottom: 20px;
+        right: 16px;
+    }
+    .toast-container {
+        bottom: 80px;
         right: 10px;
-        top: -30px;
+        left: 10px;
+    }
+    .toast {
+        font-size: 0.85rem;
+        padding: 12px 16px;
+    }
+}
+
+/* ---- MÓVIL PEQUEÑO (max 480px) -------------------------------- */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    .hero-slogan {
+        font-size: 1.05rem;
+    }
+    .impact-counter-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .counter-number {
+        font-size: 2rem;
+    }
+    .counter-item {
+        padding: 20px 12px;
+    }
+    .about-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .program-card {
+        padding: 28px 20px;
+    }
+    .donate-form-card {
+        padding: 28px 20px;
+    }
+    .amount-selectors {
+        grid-template-columns: 1fr 1fr;
+    }
+    .amount-btn {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ---- RENDIMIENTO: Preferencia de movimiento reducido ------------ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .scroll-reveal,
+    .scroll-reveal-left,
+    .scroll-reveal-right {
+        opacity: 1;
+        transform: none;
     }
 }
 
