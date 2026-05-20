@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Solidaria | Fundación Vive Vencejo</title>
+    <meta name="description" content="Encuentra indumentaria táctica, equipo de protección, accesorios y más en la Tienda Solidaria de la Fundación Vive Vencejo. Cada compra apoya a comunidades vulnerables.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fuentes premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome (Iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos de la aplicación -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Saltar al contenido principal (Accesibilidad) -->
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="main-header scrolled" id="header">
+        <div class="header-container container">
+            <a href="index.html" class="logo" aria-label="Portal de Organizaciones Sociales - Inicio">
+                <span class="logo-accent">
+                    <svg class="icon-swift" viewBox="0 0 24 24" aria-hidden="true" style="width: 1.8rem; height: 1.8rem;">
+                        <defs>
+                            <linearGradient id="swift-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#EAB308" />
+                                <stop offset="100%" stop-color="#EF4444" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#swift-grad-header)" d="M12 2 C 11.5 2, 7.5 4.5, 2 9.5 C 5.5 9, 9 7.5, 11 6.5 C 11 10.5, 9.5 15.5, 7.5 21 C 10 19, 14 19, 16.5 21 C 14.5 15.5, 13 10.5, 13 6.5 C 15 7.5, 18.5 9, 22 9.5 C 16.5 4.5, 12.5 2, 12 2 Z"/>
+                    </svg>
+                </span>
+                <span class="logo-text">Red Social</span>
+            </a>
+
+            <!-- TABS DE ORGANIZACIONES (MENÚ PRINCIPAL) -->
+            <nav class="org-tabs-nav" id="org-tabs-nav" aria-label="Seleccionar organización">
+                <button class="org-tab" data-panel="panel-vencejo" id="tab-vencejo">
+                    <svg class="icon-swift" viewBox="0 0 24 24" aria-hidden="true" style="width: 1.1em; height: 1.1em; margin-right: 6px;">
+                        <path d="M12 2 C 11.5 2, 7.5 4.5, 2 9.5 C 5.5 9, 9 7.5, 11 6.5 C 11 10.5, 9.5 15.5, 7.5 21 C 10 19, 14 19, 16.5 21 C 14.5 15.5, 13 10.5, 13 6.5 C 15 7.5, 18.5 9, 22 9.5 C 16.5 4.5, 12.5 2, 12 2 Z"/>
+                    </svg>
+                    <span>Fundación Vive Vencejo</span>
+                </button>
+                <button class="org-tab" data-panel="panel-fenix" id="tab-fenix">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <span>Corporación Ave Fénix</span>
+                </button>
+                <button class="org-tab" data-panel="panel-orianela" id="tab-orianela">
+                    <i class="fa-solid fa-seedling"></i>
+                    <span>Fundación Orianela Renacer</span>
+                </button>
+                <button class="org-tab" data-panel="panel-turismo" id="tab-turismo">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <span>Turismo El Triunfo del Cañón</span>
+                </button>
+            </nav>
+
+            <div class="header-buttons-mobile">
+                <button class="cart-trigger-mobile" id="cart-trigger-mobile" aria-label="Ver carrito de compras, 0 artículos" aria-haspopup="dialog">
+                    <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-badge" id="cart-count-mobile">0</span>
+                </button>
+            </div>
+
+            <!-- Carrito (desktop) -->
+            <div class="nav-actions desktop-cart">
+                <button class="cart-trigger" id="cart-trigger" aria-label="Ver carrito de compras, 0 artículos" aria-haspopup="dialog">
+                    <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" style="padding-top: var(--header-height);">
+
+        <!-- HERO INTRODUCTORIO DE LA TIENDA -->
+        <section class="shop-hero-section section-padding" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(37, 99, 235, 0.03) 100%); border-bottom: 1px solid rgba(0,0,0,0.03);">
+            <div class="container text-center">
+                <span class="section-tagline color-primary"><i class="fa-solid fa-gift"></i> Tienda Solidaria</span>
+                <h1 class="section-title">Nuestra Tienda Solidaria</h1>
+                <p class="section-subtitle" style="max-width: 750px; margin: 20px auto 0;">
+                    Esta tienda solidaria es una herramienta más para poder recaudar fondos y así ayudar a todas las poblaciones vulnerables. 
+                    Cada producto que adquieres es elaborado por emprendedores locales o forma parte de nuestro equipamiento oficial. 
+                    Tu compra directa nos ayuda a financiar proyectos de educación, seguridad comunitaria y desarrollo social.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="btn btn-outline" style="border-radius: 50px;"><i class="fa-solid fa-arrow-left"></i> Volver al Portal de Organizaciones</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANEL DE NAVEGACIÓN FLOTANTE / TRANSPARENTE -->
+        <div class="panel-nav-bar">
+            <div class="container panel-nav-inner">
+                <a href="index.html" class="panel-nav-btn"><i class="fa-solid fa-house"></i> Inicio General</a>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE BÚSQUEDA Y FILTROS -->
+        <section class="shop-controls-section container scroll-reveal">
+            <div class="shop-search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="shop-search-input" placeholder="Buscar productos tácticos, indumentaria, accesorios..." aria-label="Buscar en la tienda">
+            </div>
+            
+            <!-- Los chips de categorías se inyectarán aquí desde catalog.js -->
+            <div class="shop-categories-filter-bar" id="shop-categories-filter">
+                <!-- Se rellena dinámicamente -->
+            </div>
+        </section>
+
+        <!-- CATÁLOGO DINÁMICO DE PRODUCTOS -->
+        <section class="shop-catalog-section container section-padding" style="padding-top: 0;">
+            <div id="shop-dynamic-catalog">
+                <!-- Los productos se inyectarán de forma categorizada aquí con catalog.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col-brand">
+                <a href="index.html" class="logo footer-logo" aria-label="Fundación Vive Vencejo Inicio">
+                    <span class="logo-accent">
+                        <svg class="icon-swift" viewBox="0 0 24 24" aria-hidden="true" style="width: 1.8rem; height: 1.8rem;">
+                            <defs>
+                                <linearGradient id="swift-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#EAB308" />
+                                    <stop offset="100%" stop-color="#EF4444" />
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#swift-grad-footer)" d="M12 2 C 11.5 2, 7.5 4.5, 2 9.5 C 5.5 9, 9 7.5, 11 6.5 C 11 10.5, 9.5 15.5, 7.5 21 C 10 19, 14 19, 16.5 21 C 14.5 15.5, 13 10.5, 13 6.5 C 15 7.5, 18.5 9, 22 9.5 C 16.5 4.5, 12.5 2, 12 2 Z"/>
+                        </svg>
+                    </span>
+                    <span class="logo-text color-white">Vive Vencejo</span>
+                </a>
+                <p class="footer-description">
+                    Red unificada de organizaciones sociales dedicadas al desarrollo integral, seguridad, y turismo sostenible en beneficio de Soledad, Atlántico y sus comunidades aliadas.
+                </p>
+                <div class="footer-social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Organizaciones</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#panel-vencejo"><i class="fa-solid fa-chevron-right"></i> Fundación Vive Vencejo</a></li>
+                    <li><a href="index.html#panel-fenix"><i class="fa-solid fa-chevron-right"></i> Corporación Ave Fénix</a></li>
+                    <li><a href="index.html#panel-orianela"><i class="fa-solid fa-chevron-right"></i> Fundación Orianela Renacer</a></li>
+                    <li><a href="index.html#panel-turismo"><i class="fa-solid fa-chevron-right"></i> Turismo El Triunfo del Cañón</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Enlaces Útiles</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#portal-inicio"><i class="fa-solid fa-chevron-right"></i> Portal de Inicio</a></li>
+                    <li><a href="tienda.html"><i class="fa-solid fa-chevron-right"></i> Tienda Solidaria</a></li>
+                    <li><a href="index.html#donaciones-global"><i class="fa-solid fa-chevron-right"></i> Realizar una Donación</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-contact">
+                <h4>Contacto Directo</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Soledad, Atlántico, Colombia</li>
+                    <li><i class="fa-solid fa-phone"></i> +57 310 496 7407</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@vivevencejo.org</li>
+                    <li><i class="fa-solid fa-clock"></i> Lun - Sáb: 8:00 AM - 5:00 PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright-text">&copy; 2026 Fundación Vive Vencejo. Todos los derechos reservados. Desarrollado con fin social.</p>
+                <div class="footer-policies">
+                    <a href="#" class="hover-link">Política de Privacidad</a>
+                    <span class="bullet-divider">&bull;</span>
+                    <a href="#" class="hover-link">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- PANEL LATERAL DESLIZANTE DEL CARRITO DE COMPRAS -->
+    <div class="cart-sidebar-overlay" id="cart-overlay" role="presentation"></div>
+    <section class="cart-sidebar" id="cart-sidebar" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="cart-header">
+            <h3 id="cart-title"><i class="fa-solid fa-shopping-basket"></i> Tu Compra Solidaria</h3>
+            <button class="cart-close-btn" id="cart-close" aria-label="Cerrar carrito de compras"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="cart-body" id="cart-items-container">
+            <!-- Los artículos agregados se inyectarán aquí con JavaScript -->
+            <div class="cart-empty-message" id="cart-empty-msg">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Tu carrito está vacío.</p>
+                <p class="empty-notice">¡Apoya el talento de nuestros beneficiarios agregando algún producto de la tienda!</p>
+                <a href="#" class="btn btn-primary btn-sm" id="cart-go-shop">Ver Tienda</a>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-subtotal-row">
+                <span>Subtotal:</span>
+                <span class="subtotal-amount" id="cart-subtotal">$0 COP</span>
+            </div>
+            <p class="shipping-notice"><i class="fa-solid fa-truck-fast"></i> Envío calculado al checkout (Despachos nacionales)</p>
+            <div class="cart-actions-row">
+                <button class="btn btn-checkout btn-primary-gradient" id="btn-checkout-trigger"><i class="fa-solid fa-credit-card"></i> Iniciar Pago Seguro</button>
+                <button class="btn btn-whatsapp-checkout btn-whatsapp" id="btn-checkout-wa"><i class="fa-brands fa-whatsapp"></i> Finalizar por WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODAL DE CHECKOUT SIMULADO -->
+    <div class="checkout-modal-overlay" id="checkout-overlay" role="presentation"></div>
+    <div class="checkout-modal card-glass" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" aria-hidden="true">
+        <button class="checkout-close-btn" id="checkout-close" aria-label="Cerrar formulario de pago"><i class="fa-solid fa-xmark"></i></button>
+        <h3 id="checkout-title" class="text-center"><i class="fa-solid fa-shield-halved icon-blue"></i> Formulario de Pago Seguro</h3>
+        <p class="text-center checkout-subtitle">Completa tus datos para finalizar tu compra solidaria</p>
+        
+        <div class="checkout-summary-box">
+            <h4>Resumen del Pedido</h4>
+            <div id="checkout-items-list"></div>
+            <div class="checkout-total-row">
+                <span>Total a Pagar:</span>
+                <strong id="checkout-total-val">$0 COP</strong>
+            </div>
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+            <div class="form-group">
+                <label for="checkout-name">Nombre Completo <span class="required">*</span></label>
+                <input type="text" id="checkout-name" required placeholder="Ej: Juan Pérez">
+            </div>
+            <div class="form-group-grid">
+                <div class="form-group">
+                    <label for="checkout-email">Correo Electrónico <span class="required">*</span></label>
+                    <input type="email" id="checkout-email" required placeholder="Ej: juan@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="checkout-phone">Teléfono / Celular <span class="required">*</span></label>
+                    <input type="tel" id="checkout-phone" required placeholder="Ej: 310 123 4567">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="checkout-address">Dirección de Envío <span class="required">*</span></label>
+                <input type="text" id="checkout-address" required placeholder="Ej: Calle 10 # 5 - 20, Barrio El Centro">
+            </div>
+            <div class="form-group-grid">
+                <div class="form-group">
+                    <label for="checkout-city">Ciudad / Municipio <span class="required">*</span></label>
+                    <input type="text" id="checkout-city" required placeholder="Ej: Soledad">
+                </div>
+                <div class="form-group">
+                    <label for="checkout-state">Departamento <span class="required">*</span></label>
+                    <input type="text" id="checkout-state" required placeholder="Ej: Atlántico">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="checkout-notes">Notas del Pedido (Opcional)</label>
+                <textarea id="checkout-notes" rows="2" placeholder="Ej: Indicaciones especiales para la entrega..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary-gradient w-100" id="btn-pay-submit">
+                <i class="fa-solid fa-lock"></i> Realizar Pago Solidario
+            </button>
+        </form>
+    </div>
+
+    <!-- CONTENEDOR DE NOTIFICACIONES TOAST -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Scripts de la Aplicación -->
+    <script src="app.js"></script>
+    <script src="catalog.js"></script>
+</body>
+</html>

@@ -1,18 +1,18 @@
 // CONSTANTES DE PRODUCTOS DISPONIBLES
 const PRODUCTS = {
-    1: { name: "Pañoleta de la Esperanza",      price: 25000,  img: "assets/product-scarf.png" },
-    2: { name: "Kit Táctico de Superación",      price: 35000,  img: "assets/product-tactical.png" },
-    3: { name: "Escultura Vencejo en Vuelo",     price: 80000,  img: "assets/product-craft.png" },
+    1: { name: "Pañoleta de la Esperanza",      price: 25000,  img: "assets/product-scarf.png", imgs: ["assets/product-scarf.png", "assets/product-craft.png"] },
+    2: { name: "Kit Táctico de Superación",      price: 35000,  img: "assets/product-tactical.png", imgs: ["assets/product-tactical.png", "https://images.unsplash.com/photo-1541178735493-479c1a27ed24?q=80&w=600&auto=format&fit=crop"] },
+    3: { name: "Escultura Vencejo en Vuelo",     price: 80000,  img: "assets/product-craft.png", imgs: ["assets/product-craft.png", "https://images.unsplash.com/photo-1595424954374-1c4fb246cf7a?q=80&w=600&auto=format&fit=crop"] },
     // EPP — Equipo de Protección Personal
-    4: { name: "Taser Eléctrico Táctico",        price: 85000,  img: "assets/product-taser.png" },
-    5: { name: "Gas Pimienta Compacto",          price: 28000,  img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=200&auto=format&fit=crop" },
-    6: { name: "Bastón Tambo Telescópico",       price: 48000,  img: "https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=200&auto=format&fit=crop" },
-    7: { name: "Chaleco Antibalas Niv. IIIA",    price: 320000, img: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=200&auto=format&fit=crop" },
-    8: { name: "Navaja Táctica Plegable",        price: 55000,  img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=200&auto=format&fit=crop" },
-    9: { name: "Linterna Táctica LED 1200lm",    price: 65000,  img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=200&auto=format&fit=crop" },
-    10: { name: "Morral Táctico Modular 45L",   price: 125000, img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=200&auto=format&fit=crop" },
-    11: { name: "Placa Militar Personalizada",   price: 22000,  img: "https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?q=80&w=200&auto=format&fit=crop" },
-    12: { name: "Pantalón Camuflado Digital",    price: 98000,  img: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=200&auto=format&fit=crop" }
+    4: { name: "Taser Eléctrico Táctico",        price: 85000,  img: "assets/product-taser.png", imgs: ["assets/product-taser.png", "https://images.unsplash.com/photo-1615887023516-9b6bcd559e87?q=80&w=600&auto=format&fit=crop"] },
+    5: { name: "Gas Pimienta Compacto",          price: 28000,  img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1508847154043-be12a26c451e?q=80&w=600&auto=format&fit=crop"] },
+    6: { name: "Bastón Tambo Telescópico",       price: 48000,  img: "https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?q=80&w=600&auto=format&fit=crop"] },
+    7: { name: "Chaleco Antibalas Niv. IIIA",    price: 320000, img: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1509702719782-b7e61f22df67?q=80&w=600&auto=format&fit=crop"] },
+    8: { name: "Navaja Táctica Plegable",        price: 55000,  img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=600&auto=format&fit=crop"] },
+    9: { name: "Linterna Táctica LED 1200lm",    price: 65000,  img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1587300003306-d7b45eacfe6b?q=80&w=600&auto=format&fit=crop"] },
+    10: { name: "Morral Táctico Modular 45L",   price: 125000, img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=600&auto=format&fit=crop"] },
+    11: { name: "Placa Militar Personalizada",   price: 22000,  img: "https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"] },
+    12: { name: "Pantalón Camuflado Digital",    price: 98000,  img: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=200&auto=format&fit=crop", imgs: ["https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=600&auto=format&fit=crop"] }
 };
 
 
@@ -58,6 +58,12 @@ function initNavigation() {
         tab.addEventListener("click", () => {
             const targetPanelId = tab.getAttribute("data-panel");
 
+            // Si el panel no existe en la página actual (ej. estamos en tienda.html), redirigir a index.html con el hash
+            if (targetPanelId && !document.getElementById(targetPanelId)) {
+                window.location.href = "index.html#" + targetPanelId;
+                return;
+            }
+
             // Actualizar tabs activos
             orgTabs.forEach(t => {
                 t.classList.remove("active");
@@ -93,6 +99,19 @@ function initNavigation() {
             hamburger.classList.toggle("open");
             hamburger.setAttribute("aria-expanded", isOpen);
         });
+    }
+
+    // Seleccionar automáticamente tab en base al hash de la URL al cargar
+    const currentHash = window.location.hash;
+    if (currentHash) {
+        const targetPanelId = currentHash.substring(1);
+        const targetTab = Array.from(orgTabs).find(t => t.getAttribute("data-panel") === targetPanelId);
+        if (targetTab) {
+            // Un pequeño delay para permitir que el DOM se asiente
+            setTimeout(() => {
+                targetTab.click();
+            }, 100);
+        }
     }
 }
 
@@ -669,3 +688,53 @@ function showToast(message, type = "success") {
         }, 300);
     }, 4000);
 }
+
+// LOGICA DE CARRUSEL DE TARJETAS DE PRODUCTOS
+window.changeCardImage = function(btn, delta) {
+    const card = btn.closest(".product-card-item");
+    if (!card) return;
+    const slides = card.querySelectorAll(".product-gallery-slide");
+    if (slides.length <= 1) return;
+    
+    let activeIdx = -1;
+    slides.forEach((slide, idx) => {
+        if (slide.classList.contains("active")) {
+            activeIdx = idx;
+        }
+    });
+    
+    if (activeIdx !== -1) {
+        slides[activeIdx].classList.remove("active");
+        const newIdx = (activeIdx + delta + slides.length) % slides.length;
+        slides[newIdx].classList.add("active");
+    }
+};
+
+// Eventos automáticos de Hover para cambio de plano de imagen
+document.addEventListener("mouseover", (e) => {
+    const card = e.target.closest(".product-card-item");
+    if (!card) return;
+    
+    const related = e.relatedTarget;
+    if (related && card.contains(related)) return;
+    
+    const slides = card.querySelectorAll(".product-gallery-slide");
+    if (slides.length > 1) {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[1].classList.add("active");
+    }
+});
+
+document.addEventListener("mouseout", (e) => {
+    const card = e.target.closest(".product-card-item");
+    if (!card) return;
+    
+    const related = e.relatedTarget;
+    if (related && card.contains(related)) return;
+    
+    const slides = card.querySelectorAll(".product-gallery-slide");
+    if (slides.length > 0) {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[0].classList.add("active");
+    }
+});

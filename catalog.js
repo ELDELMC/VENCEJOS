@@ -235,18 +235,36 @@ const CATALOG_CATEGORIES = [
 /* ---------- Registro en el objeto global PRODUCTS (para carrito) ---------- */
 CATALOG_CATEGORIES.forEach(cat => {
   cat.products.forEach(p => {
-    PRODUCTS[p.id] = { name: p.name, price: p.price, img: p.img };
+    // Generar segunda imagen para el efecto de carrusel / doble vista
+    const img2 = p.img.includes('pexels')
+      ? 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?w=600&h=400&fit=crop'
+      : p.img.replace(/photo-[a-f0-9]+/, 'photo-1541178735493-479c1a27ed24');
+    p.imgs = [p.img, img2];
+    
+    PRODUCTS[p.id] = { name: p.name, price: p.price, img: p.img, imgs: p.imgs };
   });
 });
 
 /* ---------- Función de renderizado de tarjeta de producto ---------- */
 function buildProductCard(p) {
   const priceStr = '$' + p.price.toLocaleString('es-CO') + ' COP';
+  const slidesHtml = p.imgs.map((imgUrl, index) => `
+    <img src="${imgUrl}" alt="${p.name} - Vista ${index + 1}" class="product-img product-gallery-slide ${index === 0 ? 'active' : ''}" loading="lazy"
+         onerror="this.src='https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80&auto=format&fit=crop'">
+  `).join('');
+
   return `
     <div class="product-card-item card-glass" data-id="${p.id}">
       <div class="product-image-box">
-        <img src="${p.img}" alt="${p.name}" class="product-img product-img-cover" loading="lazy"
-             onerror="this.src='https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80&auto=format&fit=crop'">
+        <div class="product-gallery-slides">
+          ${slidesHtml}
+        </div>
+        <button class="gallery-arrow prev" onclick="event.stopPropagation(); changeCardImage(this, -1)" aria-label="Imagen anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="gallery-arrow next" onclick="event.stopPropagation(); changeCardImage(this, 1)" aria-label="Siguiente imagen">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
         <span class="product-badge ${p.badge}">${p.badgeLabel}</span>
       </div>
       <div class="product-info-box">
@@ -270,11 +288,13 @@ function renderDynamicCatalog() {
   CATALOG_CATEGORIES.forEach(cat => {
     const cards = cat.products.map(buildProductCard).join('');
     html += `
-      <div class="shop-category-header scroll-reveal">
-        <i class="${cat.icon}"></i><span>${cat.label}</span>
-      </div>
-      <div class="shop-grid grid-4 scroll-reveal" style="margin-bottom:60px;">
-        ${cards}
+      <div class="shop-category-section" id="section-${cat.id}">
+        <div class="shop-category-header scroll-reveal">
+          <i class="${cat.icon}"></i><span>${cat.label}</span>
+        </div>
+        <div class="shop-grid grid-4 scroll-reveal" style="margin-bottom:60px;">
+          ${cards}
+        </div>
       </div>`;
   });
 
@@ -286,5 +306,94 @@ function renderDynamicCatalog() {
   }
 }
 
+/* ---------- Filtros y Buscador Dinámicos ---------- */
+function renderCategoryFilters() {
+  const filterContainer = document.getElementById('shop-categories-filter');
+  if (!filterContainer) return;
+
+  let html = `
+    <button class="filter-chip active" data-filter="all">
+      <i class="fa-solid fa-border-all"></i> <span>Todos</span>
+    </button>
+  `;
+
+  CATALOG_CATEGORIES.forEach(cat => {
+    // Abreviar etiquetas largas para los chips
+    const shortLabel = cat.label
+      .replace(' & ', '/')
+      .replace(' Tácticos ', ' ')
+      .replace(' Personalizados', '')
+      .replace(' de Corte', '')
+      .split(',')[0];
+
+    html += `
+      <button class="filter-chip" data-filter="${cat.id}">
+        <i class="${cat.icon}"></i> <span>${shortLabel}</span>
+      </button>
+    `;
+  });
+
+  filterContainer.innerHTML = html;
+
+  // Asignar eventos de click a los chips
+  const chips = filterContainer.querySelectorAll('.filter-chip');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const filterVal = chip.getAttribute('data-filter');
+      const searchVal = document.getElementById('shop-search-input')?.value || '';
+      filterProducts(filterVal, searchVal);
+    });
+  });
+}
+
+function filterProducts(categoryFilter, searchQuery) {
+  const sections = document.querySelectorAll('.shop-category-section');
+  const query = searchQuery.toLowerCase().trim();
+
+  sections.forEach(section => {
+    const sectionId = section.id.replace('section-', '');
+    const cards = section.querySelectorAll('.product-card-item');
+    let matchesCount = 0;
+
+    cards.forEach(card => {
+      const name = card.querySelector('.product-item-title').textContent.toLowerCase();
+      const matchesSearch = !query || name.includes(query);
+      const matchesCategory = categoryFilter === 'all' || sectionId === categoryFilter;
+
+      if (matchesSearch && matchesCategory) {
+        card.style.display = 'flex';
+        matchesCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Ocultar sección entera de categoría si no hay productos coincidentes
+    if (matchesCount > 0) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
+function initSearchAndFilter() {
+  renderCategoryFilters();
+  const searchInput = document.getElementById('shop-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const activeChip = document.querySelector('.filter-chip.active');
+      const activeFilter = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+      filterProducts(activeFilter, e.target.value);
+    });
+  }
+}
+
 /* ---------- Ejecutar al cargar el DOM ---------- */
-document.addEventListener('DOMContentLoaded', renderDynamicCatalog);
+document.addEventListener('DOMContentLoaded', () => {
+  renderDynamicCatalog();
+  initSearchAndFilter();
+});

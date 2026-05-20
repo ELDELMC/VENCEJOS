@@ -45,14 +45,26 @@
     <header class="main-header" id="header">
         <div class="header-container container">
             <a href="#portal-inicio" class="logo" aria-label="Portal de Organizaciones Sociales - Inicio">
-                <span class="logo-accent"><i class="fa-solid fa-dove"></i></span>
+                <span class="logo-accent">
+                    <svg class="icon-swift" viewBox="0 0 24 24" aria-hidden="true" style="width: 1.8rem; height: 1.8rem;">
+                        <defs>
+                            <linearGradient id="swift-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#EAB308" />
+                                <stop offset="100%" stop-color="#EF4444" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#swift-grad-header)" d="M12 2 C 11.5 2, 7.5 4.5, 2 9.5 C 5.5 9, 9 7.5, 11 6.5 C 11 10.5, 9.5 15.5, 7.5 21 C 10 19, 14 19, 16.5 21 C 14.5 15.5, 13 10.5, 13 6.5 C 15 7.5, 18.5 9, 22 9.5 C 16.5 4.5, 12.5 2, 12 2 Z"/>
+                    </svg>
+                </span>
                 <span class="logo-text">Red Social</span>
             </a>
 
             <!-- TABS DE ORGANIZACIONES (MENÚ PRINCIPAL) -->
             <nav class="org-tabs-nav" id="org-tabs-nav" aria-label="Seleccionar organización">
                 <button class="org-tab active" data-panel="panel-vencejo" id="tab-vencejo" aria-selected="true">
-                    <i class="fa-solid fa-dove"></i>
+                    <svg class="icon-swift" viewBox="0 0 24 24" aria-hidden="true" style="width: 1.1em; height: 1.1em; margin-right: 6px;">
+                        <path d="M12 2 C 11.5 2, 7.5 4.5, 2 9.5 C 5.5 9, 9 7.5, 11 6.5 C 11 10.5, 9.5 15.5, 7.5 21 C 10 19, 14 19, 16.5 21 C 14.5 15.5, 13 10.5, 13 6.5 C 15 7.5, 18.5 9, 22 9.5 C 16.5 4.5, 12.5 2, 12 2 Z"/>
+                    </svg>
                     <span>Fundación Vive Vencejo</span>
                 </button>
                 <button class="org-tab" data-panel="panel-fenix" id="tab-fenix" aria-selected="false">
@@ -179,7 +191,12 @@
 
                         <!-- Himno / Acróstico Decorado -->
                         <div class="acrostic-box">
-                            <h4 class="acrostic-title"><i class="fa-solid fa-dove"></i> Acróstico de Vuelo</h4>
+                            <h4 class="acrostic-title">
+                                <svg class="icon-swift" viewBox="0 0 24 24" aria-hidden="true" style="width: 1.1em; height: 1.1em; fill: hsl(45, 90%, 30%); margin-right: 6px;">
+                                    <path d="M12 2 C 11.5 2, 7.5 4.5, 2 9.5 C 5.5 9, 9 7.5, 11 6.5 C 11 10.5, 9.5 15.5, 7.5 21 C 10 19, 14 19, 16.5 21 C 14.5 15.5, 13 10.5, 13 6.5 C 15 7.5, 18.5 9, 22 9.5 C 16.5 4.5, 12.5 2, 12 2 Z"/>
+                                </svg>
+                                Acróstico de Vuelo
+                            </h4>
                             <ul class="acrostic-list">
                                 <li><strong>V</strong>alor para enfrentar los desafíos de la vida cotidiana.</li>
                                 <li><strong>I</strong>nclusión como derecho fundamental de todo ser humano.</li>
@@ -298,220 +315,111 @@
                 <div class="section-header text-center scroll-reveal">
                     <span class="section-subtitle">Tienda Solidaria</span>
                     <h2 class="section-title">Compra con Propósito</h2>
-                    <p class="section-description-text">Cada producto ha sido elaborado o acondicionado por beneficiarios de nuestros programas. El 100% de las ventas financia sus empleos dignos. Explora nuestra selección de artesanías y equipo de protección personal.</p>
+                    <p class="section-description-text">Nuestra tienda es una herramienta de autogestión y recaudación de fondos. El 100% de los ingresos de cada artículo se destina directamente a financiar empleos dignos, talleres terapéuticos y programas de rehabilitación integral para personas con discapacidad, víctimas de minas antipersonales y adultos mayores. ¡Tu compra transforma vidas!</p>
                 </div>
 
-                <!-- Subtítulo categoría artesanías -->
-                <div class="shop-category-header scroll-reveal">
-                    <i class="fa-solid fa-hands-praying"></i>
-                    <span>Artesanías & Recuerdos</span>
+                <!-- Recuadro destacado / Vista previa de la Tienda -->
+                <div class="featured-shop-box card-glass scroll-reveal" style="padding: 40px; border-radius: var(--border-radius-lg); margin-top: 30px;">
+                    <div class="featured-shop-header text-center" style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.6rem; font-family: var(--font-headings); font-weight: 700; color: var(--color-text-dark); display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <i class="fa-solid fa-star" style="color: var(--color-accent-gold);"></i> Productos Destacados
+                        </h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-top: 8px;">Una muestra de los artículos elaborados artesanalmente por nuestros beneficiarios y nuestro equipo táctico.</p>
+                    </div>
+
+                    <div class="shop-grid grid-4">
+                        <!-- Producto 1: Pañoleta de la Esperanza -->
+                        <div class="product-card-item card-glass" data-id="1">
+                            <div class="product-image-box">
+                                <div class="product-gallery-slides">
+                                    <img src="assets/product-scarf.png" alt="Pañoleta de la Esperanza - Vista 1" class="product-img product-gallery-slide active" loading="lazy">
+                                    <img src="assets/product-craft.png" alt="Pañoleta de la Esperanza - Vista 2" class="product-img product-gallery-slide" loading="lazy">
+                                </div>
+                                <button class="gallery-arrow prev" onclick="event.stopPropagation(); changeCardImage(this, -1);"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="gallery-arrow next" onclick="event.stopPropagation(); changeCardImage(this, 1);"><i class="fa-solid fa-chevron-right"></i></button>
+                                <span class="product-badge bg-green">Tercera Edad</span>
+                            </div>
+                            <div class="product-info-box">
+                                <h3 class="product-item-title">Pañoleta de la Esperanza</h3>
+                                <p class="product-item-desc">Hermosa pañoleta artesanal tejida a mano por adultos mayores. Algodón hipoalergénico.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">$25.000 COP</span>
+                                    <button class="btn btn-add-cart btn-primary" onclick="addToCart(1)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2: Kit Táctico de Superación -->
+                        <div class="product-card-item card-glass" data-id="2">
+                            <div class="product-image-box">
+                                <div class="product-gallery-slides">
+                                    <img src="assets/product-tactical.png" alt="Kit Táctico de Superación - Vista 1" class="product-img product-gallery-slide active" loading="lazy">
+                                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?q=80&w=600&auto=format&fit=crop" alt="Kit Táctico - Vista 2" class="product-img product-gallery-slide" loading="lazy">
+                                </div>
+                                <button class="gallery-arrow prev" onclick="event.stopPropagation(); changeCardImage(this, -1);"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="gallery-arrow next" onclick="event.stopPropagation(); changeCardImage(this, 1);"><i class="fa-solid fa-chevron-right"></i></button>
+                                <span class="product-badge bg-blue">Víctimas de Minas</span>
+                            </div>
+                            <div class="product-info-box">
+                                <h3 class="product-item-title">Kit Táctico de Superación</h3>
+                                <p class="product-item-desc">Pulsera paracord de supervivencia tejida por víctimas de minas. Incluye silbato y broche.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">$35.000 COP</span>
+                                    <button class="btn btn-add-cart btn-primary" onclick="addToCart(2)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3: Escultura Vencejo en Vuelo -->
+                        <div class="product-card-item card-glass" data-id="3">
+                            <div class="product-image-box">
+                                <div class="product-gallery-slides">
+                                    <img src="assets/product-craft.png" alt="Escultura Vencejo en Vuelo - Vista 1" class="product-img product-gallery-slide active" loading="lazy">
+                                    <img src="https://images.unsplash.com/photo-1595424954374-1c4fb246cf7a?q=80&w=600&auto=format&fit=crop" alt="Escultura - Vista 2" class="product-img product-gallery-slide" loading="lazy">
+                                </div>
+                                <button class="gallery-arrow prev" onclick="event.stopPropagation(); changeCardImage(this, -1);"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="gallery-arrow next" onclick="event.stopPropagation(); changeCardImage(this, 1);"><i class="fa-solid fa-chevron-right"></i></button>
+                                <span class="product-badge bg-gold">Artesanos</span>
+                            </div>
+                            <div class="product-info-box">
+                                <h3 class="product-item-title">Escultura Vencejo en Vuelo</h3>
+                                <p class="product-item-desc">Figura tallada artísticamente en madera por personas con discapacidad. Símbolo de libertad.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">$80.000 COP</span>
+                                    <button class="btn btn-add-cart btn-primary" onclick="addToCart(3)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 9: Linterna Táctica LED 1200lm -->
+                        <div class="product-card-item card-glass" data-id="9">
+                            <div class="product-image-box">
+                                <div class="product-gallery-slides">
+                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop" alt="Linterna Táctica - Vista 1" class="product-img product-gallery-slide active" loading="lazy">
+                                    <img src="https://images.unsplash.com/photo-1587300003306-d7b45eacfe6b?q=80&w=600&auto=format&fit=crop" alt="Linterna Táctica - Vista 2" class="product-img product-gallery-slide" loading="lazy">
+                                </div>
+                                <button class="gallery-arrow prev" onclick="event.stopPropagation(); changeCardImage(this, -1);"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="gallery-arrow next" onclick="event.stopPropagation(); changeCardImage(this, 1);"><i class="fa-solid fa-chevron-right"></i></button>
+                                <span class="product-badge bg-blue">Iluminación</span>
+                            </div>
+                            <div class="product-info-box">
+                                <h3 class="product-item-title">Linterna Táctica LED 1200lm</h3>
+                                <p class="product-item-desc">1200 lúmenes, 5 modos de luz. Resistente al agua IP67. Batería recargable incluida.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">$65.000 COP</span>
+                                    <button class="btn btn-add-cart btn-primary" onclick="addToCart(9)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón de Redirección -->
+                    <div class="text-center" style="margin-top: 40px;">
+                        <a href="tienda.html" class="btn btn-primary-gradient btn-lg">
+                            <i class="fa-solid fa-store"></i> Ver Todo el Catálogo por Secciones
+                        </a>
+                    </div>
                 </div>
-
-                <div class="shop-grid grid-3 scroll-reveal" style="margin-bottom: 60px;">
-                    <!-- Producto 1 -->
-                    <div class="product-card-item card-glass" data-id="1" data-name="Pañoleta de la Esperanza" data-price="25000">
-                        <div class="product-image-box">
-                            <img src="assets/product-scarf.png" alt="Pañoleta de la Esperanza tejida a mano con hilos verde, azul y dorado" class="product-img" loading="lazy">
-                            <span class="product-badge bg-green">Tercera Edad</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Pañoleta de la Esperanza</h3>
-                            <p class="product-item-desc">Hermosa pañoleta artesanal tejida a mano por adultos mayores. Colores vibrantes y algodón hipoalergénico.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$25.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(1)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 2 -->
-                    <div class="product-card-item card-glass" data-id="2" data-name="Kit Táctico de Superación" data-price="35000">
-                        <div class="product-image-box">
-                            <img src="assets/product-tactical.png" alt="Pulsera táctica paracord tejida con hilos azul y rojo de alta resistencia" class="product-img" loading="lazy">
-                            <span class="product-badge bg-blue">Víctimas de Minas</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Kit Táctico de Superación</h3>
-                            <p class="product-item-desc">Pulsera paracord de supervivencia tejida por víctimas de minas. Incluye silbato y broche metálico de alta resistencia.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$35.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(2)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 3 -->
-                    <div class="product-card-item card-glass" data-id="3" data-name="Escultura Vencejo en Vuelo" data-price="80000">
-                        <div class="product-image-box">
-                            <img src="assets/product-craft.png" alt="Escultura en madera tallada con la forma de un vencejo volando" class="product-img" loading="lazy">
-                            <span class="product-badge bg-gold">Artesanos con Discapacidad</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Escultura Vencejo en Vuelo</h3>
-                            <p class="product-item-desc">Figura tallada artísticamente en madera por personas con discapacidad motriz. Símbolo de libertad y resiliencia.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$80.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(3)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Subtítulo categoría EPP -->
-                <div class="shop-category-header scroll-reveal">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <span>Equipo de Protección Personal (EPP)</span>
-                </div>
-
-                <div class="shop-grid grid-4 scroll-reveal">
-                    <!-- Producto 4: Taser -->
-                    <div class="product-card-item card-glass" data-id="4" data-name="Taser Eléctrico Táctico" data-price="85000">
-                        <div class="product-image-box">
-                            <img src="assets/product-taser.png" alt="Taser eléctrico táctico compacto de defensa personal" class="product-img" loading="lazy">
-                            <span class="product-badge bg-red">EPP Defensa</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Taser Eléctrico Táctico</h3>
-                            <p class="product-item-desc">Dispositivo de defensa eléctrica compacto. Funda de cuero incluida. Ensamblado por veteranos con discapacidad.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$85.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(4)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 5: Gas Pimienta -->
-                    <div class="product-card-item card-glass" data-id="5" data-name="Gas Pimienta Compacto" data-price="28000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=600&auto=format&fit=crop" alt="Spray gas pimienta compacto naranja de defensa personal con llavero" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-red">EPP Defensa</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Gas Pimienta Compacto</h3>
-                            <p class="product-item-desc">Aerosol de pimienta con clip de seguridad y mosquetón. Alcance de 3 m. Verificado y empacado por nuestros beneficiarios.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$28.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(5)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 6: Bastón Tambo -->
-                    <div class="product-card-item card-glass" data-id="6" data-name="Bastón Tambo Telescópico" data-price="48000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=600&auto=format&fit=crop" alt="Bastón tambo telescópico negro metálico para defensa personal" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-blue">EPP Defensa</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Bastón Tambo Telescópico</h3>
-                            <p class="product-item-desc">Bastón expansible de acero inoxidable. Se pliega a 26 cm y extiende a 65 cm. Funda de nylon incluida.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$48.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(6)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 7: Chaleco Antibalas -->
-                    <div class="product-card-item card-glass" data-id="7" data-name="Chaleco Antibalas Nivel IIIA" data-price="320000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600&auto=format&fit=crop" alt="Chaleco antibalas táctico negro nivel IIIA con placas molle" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-dark">EPP Premium</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Chaleco Antibalas Niv. IIIA</h3>
-                            <p class="product-item-desc">Chaleco táctico con sistema MOLLE y placas balisticas de nivel IIIA. Tallas S-XXL. Fabricado por veteranos reintegrados.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$320.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(7)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 8: Navaja -->
-                    <div class="product-card-item card-glass" data-id="8" data-name="Navaja Táctica Plegable" data-price="55000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=600&auto=format&fit=crop" alt="Navaja táctica plegable con mango negro y hoja de acero inoxidable" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-dark">EPP Herramienta</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Navaja Táctica Plegable</h3>
-                            <p class="product-item-desc">Hoja de acero inoxidable 440C, mango ergonómico antideslizante. Clip de bolsillo incluido. Acabado por artesanos con discapacidad motriz.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$55.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(8)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 9: Linterna Táctica -->
-                    <div class="product-card-item card-glass" data-id="9" data-name="Linterna Táctica LED 1200lm" data-price="65000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop" alt="Linterna táctica LED negra de alta potencia 1200 lúmenes con cabeza de zoom" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-blue">EPP Iluminación</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Linterna Táctica LED 1200lm</h3>
-                            <p class="product-item-desc">1200 lúmenes, 5 modos de luz. Resistente al agua IP67. Batería 18650 recargable incluida. Ensamblada artesanalmente.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$65.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(9)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 10: Morral Táctico -->
-                    <div class="product-card-item card-glass" data-id="10" data-name="Morral Táctico Modular 45L" data-price="125000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Morral táctico modular negro de 45 litros con sistema MOLLE y múltiples bolsillos" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-green">EPP Transporte</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Morral Táctico Modular 45L</h3>
-                            <p class="product-item-desc">45 litros de capacidad con sistema MOLLE externo. Material 600D Oxford resistente al agua. Confeccionado por nuestros beneficiarios.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$125.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(10)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 11: Placas Militares -->
-                    <div class="product-card-item card-glass" data-id="11" data-name="Placa Militar Personalizada" data-price="22000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?q=80&w=600&auto=format&fit=crop" alt="Placas militares de identificación personalizadas en acero inoxidable con cadena" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-gold">EPP Identificación</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Placa Militar Personalizada</h3>
-                            <p class="product-item-desc">Dog tags de acero inoxidable grabadas a láser con nombre, tipo de sangre y NIT de la fundación. Par con cadenas incluidas.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$22.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(11)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 12: Pantalón Camuflado -->
-                    <div class="product-card-item card-glass" data-id="12" data-name="Pantalón Camuflado Digital" data-price="98000">
-                        <div class="product-image-box">
-                            <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=600&auto=format&fit=crop" alt="Pantalón táctico camuflado digital multicam con bolsillos cargo reforzados" class="product-img product-img-cover" loading="lazy">
-                            <span class="product-badge bg-green">EPP Indumentaria</span>
-                        </div>
-                        <div class="product-info-box">
-                            <h3 class="product-item-title">Pantalón Camuflado Digital</h3>
-                            <p class="product-item-desc">Pantalón táctico tipo ripstop con camuflado digital Multicam. Bolsillos cargo reforzados. Tallas 28-42. Confeccionado por nuestros operarios.</p>
-                            <div class="product-price-row">
-                                <span class="product-price">$98.000 COP</span>
-                                <button class="btn btn-add-cart btn-primary" onclick="addToCart(12)"><i class="fa-solid fa-cart-plus"></i> Añadir</button>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /shop-grid grid-4 EPP -->
-
-                <!-- ===== CATÁLOGO DINÁMICO — renderizado por app.js ===== -->
-                <div id="shop-dynamic-catalog"></div>
-
             </div>
         </section>
 
@@ -993,7 +901,17 @@
         <div class="container footer-container grid-4">
             <div class="footer-col-brand">
                 <a href="#" class="logo footer-logo" aria-label="Fundación Vive Vencejo Inicio">
-                    <span class="logo-accent"><i class="fa-solid fa-dove"></i></span>
+                    <span class="logo-accent">
+                        <svg class="icon-swift" viewBox="0 0 24 24" aria-hidden="true" style="width: 1.8rem; height: 1.8rem;">
+                            <defs>
+                                <linearGradient id="swift-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#EAB308" />
+                                    <stop offset="100%" stop-color="#EF4444" />
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#swift-grad-footer)" d="M12 2 C 11.5 2, 7.5 4.5, 2 9.5 C 5.5 9, 9 7.5, 11 6.5 C 11 10.5, 9.5 15.5, 7.5 21 C 10 19, 14 19, 16.5 21 C 14.5 15.5, 13 10.5, 13 6.5 C 15 7.5, 18.5 9, 22 9.5 C 16.5 4.5, 12.5 2, 12 2 Z"/>
+                        </svg>
+                    </span>
                     <span class="logo-text color-white">Vive Vencejo</span>
                 </a>
                 <p class="footer-about-text">
