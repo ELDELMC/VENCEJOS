@@ -1,21 +1,21 @@
 /* SYSTEM DESIGN VARIABLES & CONFIGURATION */
 :root {
-    /* Color Palette (Sophisticated Colombian Flag Inspiration + Hope Green) */
-    --color-primary-green: hsl(142, 72%, 29%);       /* Hope Green (AA/AAA Contrast) */
-    --color-primary-green-light: hsl(142, 60%, 94%); /* Light tint for cards */
-    --color-secondary-blue: hsl(217, 89%, 45%);      /* Trust Blue */
-    --color-secondary-blue-light: hsl(217, 75%, 94%);/* Light tint for cards */
-    --color-accent-gold: hsl(45, 93%, 47%);          /* Gold/Yellow for badges/focus */
+    /* Color Palette (Military/Camouflage Inspired - US Army Pattern) */
+    --color-primary-green: hsl(107, 50%, 25%);       /* Military Dark Green */
+    --color-primary-green-light: hsl(107, 40%, 92%); /* Light tint for cards */
+    --color-secondary-brown: hsl(32, 48%, 32%);      /* Military Brown/Tan */
+    --color-secondary-brown-light: hsl(32, 40%, 92%);/* Light brown tint for cards */
+    --color-accent-gold: hsl(45, 93%, 47%);          /* Gold/Yellow for badges/focus (from military insignia) */
     --color-accent-gold-light: hsl(45, 80%, 94%);    /* Light gold tint */
-    --color-accent-red: hsl(0, 84%, 55%);            /* Sophisticated Red */
-    --color-accent-red-light: hsl(0, 75%, 94%);      /* Light red tint */
+    --color-accent-red: hsl(0, 0%, 15%);             /* Military Black */
+    --color-accent-red-light: hsl(0, 0%, 92%);       /* Light black/gray tint */
     
     /* Backgrounds & Text */
-    --color-bg-light: hsl(210, 20%, 98%);            /* Off-white background */
-    --color-bg-alt: hsl(210, 16%, 95%);              /* Slightly darker gray/blue */
+    --color-bg-light: hsl(0, 0%, 97%);               /* Off-white background */
+    --color-bg-alt: hsl(30, 25%, 92%);               /* Slightly darker military-inspired beige */
     --color-card-bg: rgba(255, 255, 255, 0.85);      /* Glassmorphism card bg */
-    --color-text-dark: hsl(215, 28%, 17%);           /* Near black text */
-    --color-text-muted: hsl(215, 16%, 45%);          /* Gray text */
+    --color-text-dark: hsl(0, 0%, 15%);              /* Military Black text */
+    --color-text-muted: hsl(0, 0%, 40%);             /* Gray text */
     --color-white: hsl(0, 0%, 100%);
     --color-black: hsl(0, 0%, 0%);
 
@@ -27,8 +27,8 @@
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-primary: 0 10px 20px -5px hsla(142, 72%, 29%, 0.3);
-    --shadow-blue: 0 10px 20px -5px hsla(217, 89%, 45%, 0.3);
+    --shadow-primary: 0 10px 20px -5px hsla(107, 50%, 25%, 0.3);
+    --shadow-blue: 0 10px 20px -5px hsla(32, 48%, 32%, 0.3);
     --border-radius-sm: 8px;
     --border-radius-md: 16px;
     --border-radius-lg: 24px;
@@ -102,7 +102,7 @@ button {
     position: absolute;
     top: -100px;
     left: 20px;
-    background: var(--color-secondary-blue);
+    background: var(--color-secondary-brown);
     color: var(--color-white);
     padding: 12px 24px;
     border-radius: var(--border-radius-sm);
@@ -187,7 +187,7 @@ button {
 
 .btn-primary-gradient {
     color: var(--color-white);
-    background: linear-gradient(135deg, var(--color-primary-green), var(--color-secondary-blue));
+    background: linear-gradient(135deg, var(--color-primary-green), var( $script:replacements++; $newString ));
     box-shadow: var(--shadow-primary);
 }
 .btn-primary-gradient::before {
@@ -197,7 +197,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--color-secondary-blue), var(--color-primary-green));
+    background: linear-gradient(135deg, var(--color-secondary-brown), var(--color-primary-green));
     opacity: 0;
     transition: opacity var(--transition-normal);
     z-index: -1;
@@ -220,7 +220,7 @@ button {
     transform: translateY(-3px);
     border-color: var(--color-white);
     background-color: var(--color-white);
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
     box-shadow: var(--shadow-lg);
 }
 
@@ -230,7 +230,7 @@ button {
     padding: 10px 20px;
 }
 .btn-primary:hover {
-    background-color: var(--color-secondary-blue);
+    background-color: var( $script:replacements++; $newString );
     transform: translateY(-2px);
 }
 
@@ -262,7 +262,7 @@ button {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
     display: inline-block;
     margin-bottom: 12px;
     position: relative;
@@ -362,7 +362,7 @@ button {
 }
 
 .logo-text {
-    background: linear-gradient(135deg, var(--color-primary-green), var(--color-secondary-blue));
+    background: linear-gradient(135deg, var(--color-primary-green), var( $script:replacements++; $newString ));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -423,7 +423,7 @@ button {
 .cart-trigger, .cart-trigger-mobile {
     position: relative;
     background: var(--color-white);
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
     border-radius: 50%;
     width: 44px;
     height: 44px;
@@ -436,7 +436,7 @@ button {
     transition: var(--transition-normal);
 }
 .cart-trigger:hover, .cart-trigger-mobile:hover {
-    background-color: var(--color-secondary-blue);
+    background-color: var( $script:replacements++; $newString );
     color: var(--color-white);
     transform: scale(1.05);
 }
@@ -525,9 +525,9 @@ button {
 }
 .org-tab.active {
     color: var(--color-white);
-    background: linear-gradient(135deg, var(--color-primary-green), var(--color-secondary-blue));
+    background: linear-gradient(135deg, var(--color-primary-green), var(--color-secondary-brown));
     border-color: transparent;
-    box-shadow: 0 6px 18px -4px hsla(142, 72%, 29%, 0.4);
+    box-shadow: 0 6px 18px -4px hsla(107, 50%, 25%, 0.4);
     transform: translateY(-2px);
 }
 
@@ -618,11 +618,11 @@ button {
 
 /* Variante azul para el botón "Inicio General" */
 .panel-nav-btn--top i {
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
 }
 .panel-nav-btn--top:hover {
-    background-color: var(--color-secondary-blue);
-    border-color: var(--color-secondary-blue);
+    background-color: var( $script:replacements++; $newString );
+    border-color: var( $script:replacements++; $newString );
 }
 
 /* ============================================================
@@ -821,15 +821,18 @@ button {
     font-weight: 900;
     margin-bottom: 15px;
     letter-spacing: -1px;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .highlight-text-green {
-    background: linear-gradient(135deg, var(--color-primary-green), hsl(142, 60%, 45%));
+    background: linear-gradient(135deg, hsl(107, 50%, 25%), hsl(107, 55%, 35%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .highlight-text-blue {
-    background: linear-gradient(135deg, var(--color-secondary-blue), hsl(217, 80%, 60%));
+    background: linear-gradient(135deg, hsl(32, 48%, 32%), hsl(45, 93%, 47%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -856,12 +859,12 @@ button {
     gap: 20px;
 }
 .hero-buttons .btn-secondary-outline {
-    color: var(--color-secondary-blue);
-    border-color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
+    border-color: var( $script:replacements++; $newString );
     background-color: transparent;
 }
 .hero-buttons .btn-secondary-outline:hover {
-    background-color: var(--color-secondary-blue);
+    background-color: var( $script:replacements++; $newString );
     color: var(--color-white);
 }
 
@@ -946,7 +949,7 @@ button {
 .card-location {
     top: -20px;
     right: -10px;
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
     font-family: var(--font-headings);
     font-weight: 600;
     font-size: 0.95rem;
@@ -1394,8 +1397,8 @@ button {
 .bg-green-light { background-color: var(--color-primary-green-light); }
 .icon-green { color: var(--color-primary-green); }
 
-.bg-blue-light { background-color: var(--color-secondary-blue-light); }
-.icon-blue { color: var(--color-secondary-blue); }
+.bg-blue-light { background-color: var( $script:replacements++; $newString -light); }
+.icon-blue { color: var( $script:replacements++; $newString ); }
 
 .bg-gold-light { background-color: var(--color-accent-gold-light); }
 .icon-gold { color: var(--color-accent-gold); }
@@ -1431,8 +1434,8 @@ button {
     width: 60px;
     height: 60px;
     border-radius: var(--border-radius-sm);
-    background: linear-gradient(135deg, var(--color-primary-green-light), var(--color-secondary-blue-light));
-    color: var(--color-secondary-blue);
+    background: linear-gradient(135deg, var(--color-primary-green-light), var( $script:replacements++; $newString -light));
+    color: var( $script:replacements++; $newString );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1458,7 +1461,7 @@ button {
     font-family: var(--font-headings);
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
     display: flex;
     align-items: center;
     gap: 5px;
@@ -1472,7 +1475,7 @@ button {
     border-color: rgba(34, 197, 94, 0.1);
 }
 .program-card:hover .program-icon-wrapper {
-    background: linear-gradient(135deg, var(--color-primary-green), var(--color-secondary-blue));
+    background: linear-gradient(135deg, var(--color-primary-green), var( $script:replacements++; $newString ));
     color: var(--color-white);
     transform: scale(1.05);
 }
@@ -1549,7 +1552,7 @@ button {
     text-transform: uppercase;
 }
 .bg-green  { background-color: var(--color-primary-green); }
-.bg-blue   { background-color: var(--color-secondary-blue); }
+.bg-blue   { background-color: var( $script:replacements++; $newString ); }
 .bg-gold   { background-color: var(--color-accent-gold); color: hsl(45, 90%, 20%) !important; }
 .bg-red    { background-color: var(--color-accent-red); }
 .bg-dark   { background-color: hsl(215, 28%, 22%); }
@@ -1590,7 +1593,7 @@ button {
     font-family: var(--font-headings);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
 }
 
 .btn-add-cart {
@@ -1610,7 +1613,7 @@ button {
     gap: 14px;
     margin-bottom: 28px;
     padding: 14px 24px;
-    background: linear-gradient(135deg, var(--color-primary-green-light), var(--color-secondary-blue-light));
+    background: linear-gradient(135deg, var(--color-primary-green-light), var( $script:replacements++; $newString -light));
     border-radius: var(--border-radius-md);
     border-left: 5px solid var(--color-primary-green);
     font-family: var(--font-headings);
@@ -1938,7 +1941,7 @@ button {
 
 /* SECCIÓN 8: CÓMO AYUDARNOS (DONACIÓN SECCIÓN) */
 .donate-section {
-    background: linear-gradient(135deg, hsl(217, 89%, 20%), hsl(142, 72%, 18%));
+    background: linear-gradient(135deg, hsl(32, 48%, 32%), hsl(107, 50%, 25%));
     position: relative;
     overflow: hidden;
 }
@@ -2143,7 +2146,7 @@ button {
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    border-color: var(--color-secondary-blue);
+    border-color: var( $script:replacements++; $newString );
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
 }
 
@@ -2478,7 +2481,7 @@ button {
 }
 .cart-item-price {
     font-family: var(--font-headings);
-    color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
     font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 8px;
@@ -2687,15 +2690,15 @@ button {
     transition: var(--transition-fast);
 }
 .payment-tab.active {
-    color: var(--color-secondary-blue);
-    border-bottom-color: var(--color-secondary-blue);
+    color: var( $script:replacements++; $newString );
+    border-bottom-color: var( $script:replacements++; $newString );
 }
 
 .delivery-notice-text {
     font-size: 0.85rem;
     color: var(--color-text-muted);
-    background-color: var(--color-secondary-blue-light);
-    border-left: 4px solid var(--color-secondary-blue);
+    background-color: var( $script:replacements++; $newString -light);
+    border-left: 4px solid var( $script:replacements++; $newString );
     padding: 12px;
     border-radius: 0 4px 4px 0;
 }
@@ -3038,3 +3041,4 @@ button {
 .filter-chip.active i {
     color: var(--color-white);
 }
+
